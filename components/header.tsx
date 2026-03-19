@@ -43,7 +43,7 @@ const megaNavItems = [
   },
   {
     key: "skills",
-    label: "Phonic Skills",
+    label: "Phonics Skills",
     href: "/skills/",
     title: "Skills",
     intro: "Browse decoding skills from letter-sound knowledge through advanced vowel and syllable patterns.",
