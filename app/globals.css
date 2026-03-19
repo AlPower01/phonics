@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --font-fraunces: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-nunito: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --ink-900: #1a1a1a;
+  --ink-700: #3f3f46;
+  --ink-500: #71717a;
+  --paper-50: #f7f7f8;
+  --paper-100: #efeff1;
+  --paper-200: #e4e4e7;
+  --line: #d4d4d8;
+  --brand-500: #3f3f46;
+  --brand-600: #27272a;
+  --accent-500: #71717a;
+  --success-500: #52525b;
+  --warning-500: #52525b;
+  --parent-100: #f1f1f3;
+  --teacher-100: #ececef;
+  --silo-phonics: #71717a;
+  --silo-skills: #71717a;
+  --silo-teaching: #71717a;
+  --silo-home: #71717a;
+  --silo-support: #71717a;
+  --silo-reviews: #71717a;
+  --silo-science-of-reading: #71717a;
+  --shadow-sm: 0 0 0 rgba(0, 0, 0, 0);
+  --shadow-md: 0 0 0 rgba(0, 0, 0, 0);
+  --shadow-lg: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+@theme inline {
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-paper-50: var(--paper-50);
+  --color-paper-100: var(--paper-100);
+  --color-paper-200: var(--paper-200);
+  --color-line: var(--line);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-accent-500: var(--accent-500);
+  --color-success-500: var(--success-500);
+  --color-warning-500: var(--warning-500);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-nunito);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper-50);
+  color: var(--ink-900);
+  font-family: var(--font-nunito), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(113, 113, 122, 0.22);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 3px;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-nunito), sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--ink-700);
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
+  }
+
+  .surface-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .section-space {
+    @apply py-12 md:py-16 lg:py-[72px];
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-[rgba(0,0,0,0.08)] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-ink-700;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-ink-900 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-ink-700;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-[rgba(0,0,0,0.14)] bg-white px-5 py-3 text-sm font-bold text-ink-900 transition hover:-translate-y-0.5 hover:border-ink-900 hover:text-ink-900;
+  }
+
+  .button-tertiary {
+    @apply inline-flex items-center gap-2 text-sm font-bold text-ink-900 transition hover:gap-3;
+  }
+}

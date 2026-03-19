@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Menu Wireframe - Phonics.org</title>
+  <link rel="stylesheet" href="wireframe-base.css">
+  <style>
+    .mega-menu-demo {
+      position: relative;
+      background: white;
+    }
+    .mega-panel {
+      background: white;
+      border: 2px solid var(--wire-gray-3);
+      border-top: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      padding: 30px;
+    }
+    .mega-col {
+      flex: 1;
+      padding: 0 20px;
+    }
+    .mega-col:first-child {
+      background: rgba(77, 171, 247, 0.05);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 240px;
+    }
+    .mega-col:last-child {
+      background: rgba(255, 249, 219, 0.3);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 240px;
+    }
+    .mega-link {
+      display: block;
+      padding: 8px 0;
+      color: var(--wire-text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .mega-link:hover {
+      color: var(--wire-blue);
+    }
+    .mega-link-desc {
+      font-size: 12px;
+      color: var(--wire-gray-5);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    .mega-section-head {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--wire-gray-5);
+      margin-bottom: 12px;
+      margin-top: 20px;
+    }
+    .mega-section-head:first-child {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wireframe-info">
+    <h1>Mega Menu Navigation Wireframe</h1>
+    <p>The most important architectural change | Exposes full silo structure | Desktop: hover, Mobile: accordion drawer</p>
+  </div>
+
+  <div class="wireframe-nav">
+    <a href="01-homepage.html">← Homepage</a>
+    <a href="index.html">All Wireframes</a>
+    <a href="03-pillar-page.html">Pillar Page →</a>
+  </div>
+
+  <!-- MEGA MENU OVERVIEW -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Mega Menu System Overview</div>
+      <div class="wire-callout">
+        <strong>Purpose:</strong> The mega menu is the primary navigation mechanism. It must expose the full silo structure in a scannable, visually organized panel. Each of the 7 nav items opens a mega menu with this 4-column structure.
+      </div>
+
+      <div class="wire-block" style="margin-top: 24px;">
+        <div class="wire-label">Specifications</div>
+        <table style="width: 100%; font-size: 14px;">
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600; width: 200px;">Trigger</td>
+            <td style="padding: 12px;">Hover on desktop (200ms delay), tap on mobile</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600;">Panel Width</td>
+            <td style="padding: 12px;">100% viewport width, max 1200px centered</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600;">Panel Height</td>
+            <td style="padding: 12px;">Auto-fit content, max ~400px with scroll</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600;">Animation</td>
+            <td style="padding: 12px;">Fade + slide down, 150ms ease-out</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; font-weight: 600;">Mobile</td>
+            <td style="padding: 12px;">Full-screen accordion panels within hamburger drawer</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAMPLE 1: BY SKILL MEGA MENU -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-2">Example 1: "By Skill" Mega Menu (Desktop)</div>
+      <p class="wire-text mb-3">This is the densest panel — uses 2 link columns to fit all skills</p>
+
+      <div class="mega-menu-demo">
+        <!-- Simulated header -->
+        <div class="wire-nav-bar" style="background: white; border-bottom: 2px solid var(--wire-gray-3);">
+          <div class="wire-heading-3" style="margin: 0;">📘 Phonics.org</div>
+          <div class="wire-nav-items">
+            <span class="wire-nav-item">Phonics 101</span>
+            <span class="wire-nav-item" style="background: var(--wire-gray-1); font-weight: 700; border-bottom: 3px solid var(--wire-blue);">By Skill ▼</span>
+            <span class="wire-nav-item">For Parents</span>
+            <span class="wire-nav-item">For Teachers</span>
+          </div>
+        </div>
+
+        <!-- Mega panel -->
+        <div class="mega-panel">
+          <div class="flex gap-3" style="align-items: flex-start;">
+
+            <!-- Column 1: Section Intro -->
+            <div class="mega-col">
+              <div style="font-size: 40px; margin-bottom: 12px;">🔤</div>
+              <div class="wire-heading-3" style="margin-bottom: 8px;">Phonics Skills</div>
+              <p style="font-size: 13px; color: var(--wire-gray-5); margin-bottom: 16px; line-height: 1.5;">
+                Master every phonics skill from letters to complex spelling patterns
+              </p>
+              <a href="#" class="wire-button small">Skills Overview →</a>
+            </div>
+
+            <!-- Column 2: Primary Links -->
+            <div class="mega-col">
+              <div class="mega-section-head">Foundational Skills</div>
+              <a href="#" class="mega-link">
+                Letter-Sound Relationships
+                <div class="mega-link-desc">Connect letters to their sounds</div>
+              </a>
+              <a href="#" class="mega-link">
+                CVC Words
+                <div class="mega-link-desc">Consonant-vowel-consonant patterns</div>
+              </a>
+              <a href="#" class="mega-link">
+                Short Vowels
+                <div class="mega-link-desc">a, e, i, o, u sounds</div>
+              </a>
+              <a href="#" class="mega-link">
+                Consonant Blends
+                <div class="mega-link-desc">bl, cr, st and more</div>
+              </a>
+              <a href="#" class="mega-link">
+                Consonant Digraphs
+                <div class="mega-link-desc">sh, ch, th, wh, ph</div>
+              </a>
+            </div>
+
+            <!-- Column 3: Secondary Links -->
+            <div class="mega-col">
+              <div class="mega-section-head">Advanced Skills</div>
+              <a href="#" class="mega-link">
+                Long Vowels & Silent E
+                <div class="mega-link-desc">Magic e patterns</div>
+              </a>
+              <a href="#" class="mega-link">
+                Vowel Teams & Digraphs
+                <div class="mega-link-desc">ai, ea, oa, ue patterns</div>
+              </a>
+              <a href="#" class="mega-link">
+                R-Controlled Vowels
+                <div class="mega-link-desc">ar, er, ir, or, ur</div>
+              </a>
+              <a href="#" class="mega-link">
+                Diphthongs
+                <div class="mega-link-desc">oi, oy, ou, ow sounds</div>
+              </a>
+              <a href="#" class="mega-link">
+                Syllable Types
+                <div class="mega-link-desc">6 syllable patterns</div>
+              </a>
+              <div style="margin-top: 16px;">
+                <a href="#" style="color: var(--wire-blue); font-weight: 600; font-size: 13px; text-decoration: none;">View All Skills →</a>
+              </div>
+            </div>
+
+            <!-- Column 4: Featured Content -->
+            <div class="mega-col">
+              <div class="mega-section-head">Featured Guide</div>
+              <div class="wire-card" style="padding: 12px; margin: 0;">
+                <div class="wire-image small" style="min-height: 100px; font-size: 28px; margin-bottom: 8px;">🖼️</div>
+                <div class="wire-heading-3" style="font-size: 14px; margin-bottom: 6px;">CVC Words: The Complete Guide</div>
+                <p style="font-size: 12px; color: var(--wire-gray-5); line-height: 1.4;">
+                  Everything you need to know about teaching consonant-vowel-consonant words...
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-annotation" style="margin-top: 16px;">
+        4-column layout: (1) Section intro with icon + description + overview link, (2-3) Navigation links grouped by complexity, (4) Featured article card that rotates
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAMPLE 2: FOR PARENTS MEGA MENU -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-2">Example 2: "For Parents" Mega Menu (Desktop)</div>
+      <p class="wire-text mb-3">Organized by child's age and common parent concerns</p>
+
+      <div class="mega-menu-demo">
+        <div class="wire-nav-bar" style="background: white; border-bottom: 2px solid var(--wire-gray-3);">
+          <div class="wire-heading-3" style="margin: 0;">📘 Phonics.org</div>
+          <div class="wire-nav-items">
+            <span class="wire-nav-item">By Skill</span>
+            <span class="wire-nav-item" style="background: var(--wire-gray-1); font-weight: 700; border-bottom: 3px solid var(--wire-green);">For Parents ▼</span>
+            <span class="wire-nav-item">For Teachers</span>
+          </div>
+        </div>
+
+        <div class="mega-panel">
+          <div class="flex gap-3" style="align-items: flex-start;">
+
+            <div class="mega-col" style="background: rgba(81, 207, 102, 0.05);">
+              <div style="font-size: 40px; margin-bottom: 12px;">🏠</div>
+              <div class="wire-heading-3" style="margin-bottom: 8px;">For Parents</div>
+              <p style="font-size: 13px; color: var(--wire-gray-5); margin-bottom: 16px; line-height: 1.5;">
+                Everything you need to support your child's reading journey
+              </p>
+              <a href="#" class="wire-button small" style="background: var(--wire-green);">Parent Guide →</a>
+            </div>
+
+            <div class="mega-col">
+              <div class="mega-section-head">By Age</div>
+              <a href="#" class="mega-link">
+                Ages 3-4: Pre-Reading
+                <div class="mega-link-desc">Letter recognition basics</div>
+              </a>
+              <a href="#" class="mega-link">
+                Ages 4-5: Beginning Readers
+                <div class="mega-link-desc">First sounds and CVC words</div>
+              </a>
+              <a href="#" class="mega-link">
+                Ages 5-7: Developing Readers
+                <div class="mega-link-desc">Blending and fluency</div>
+              </a>
+              <a href="#" class="mega-link">
+                Ages 7+: Advanced Readers
+                <div class="mega-link-desc">Complex patterns</div>
+              </a>
+            </div>
+
+            <div class="mega-col">
+              <div class="mega-section-head">Popular Topics</div>
+              <a href="#" class="mega-link">
+                Teaching Phonics at Home
+              </a>
+              <a href="#" class="mega-link">
+                Phonics Activities & Games
+              </a>
+              <a href="#" class="mega-link">
+                Choosing Books & Apps
+              </a>
+              <a href="#" class="mega-link">
+                Progress Tracking
+              </a>
+              <a href="#" class="mega-link">
+                Homeschool Phonics
+              </a>
+              <a href="#" class="mega-link">
+                When to Seek Help
+              </a>
+            </div>
+
+            <div class="mega-col">
+              <div class="mega-section-head">Top Rated Apps</div>
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div class="wire-score" style="width: 40px; height: 40px; font-size: 16px;">4.7</div>
+                  <div style="flex: 1;">
+                    <div style="font-weight: 600; font-size: 13px;">Hooked on Phonics</div>
+                    <div style="font-size: 11px; color: var(--wire-gray-5);">Ages 3-8</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div class="wire-score" style="width: 40px; height: 40px; font-size: 16px;">4.5</div>
+                  <div style="flex: 1;">
+                    <div style="font-weight: 600; font-size: 13px;">Homer</div>
+                    <div style="font-size: 11px; color: var(--wire-gray-5);">Ages 2-8</div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 12px;">
+                <a href="#" style="color: var(--wire-green); font-weight: 600; font-size: 13px; text-decoration: none;">View All Reviews →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-annotation" style="margin-top: 16px;">
+        Column 4 can vary: featured content, top apps, quick links, etc. Each nav item's mega menu should feel distinct.
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE VERSION -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-2">Mobile Navigation (< 768px)</div>
+      <p class="wire-text mb-3">Full-height drawer with accordion expansion</p>
+
+      <div style="max-width: 320px; margin: 0 auto;">
+        <div class="wire-block" style="background: white; border: 2px solid var(--wire-gray-3); padding: 0;">
+          <div style="padding: 16px; border-bottom: 1px solid var(--wire-gray-3); display: flex; justify-content: space-between; align-items: center;">
+            <div class="wire-heading-3" style="margin: 0;">Menu</div>
+            <div style="font-size: 24px; cursor: pointer;">✕</div>
+          </div>
+
+          <div style="padding: 0;">
+            <!-- Phonics 101 - Expanded -->
+            <div style="border-bottom: 1px solid var(--wire-gray-3);">
+              <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; cursor: pointer; background: var(--wire-gray-1);">
+                <span>Phonics 101</span>
+                <span>▼</span>
+              </div>
+              <div style="background: var(--wire-gray-1); padding: 8px 16px 16px 32px;">
+                <a href="#" style="display: block; padding: 8px 0; color: var(--wire-text); text-decoration: none; font-size: 14px;">Overview</a>
+                <a href="#" style="display: block; padding: 8px 0; color: var(--wire-text); text-decoration: none; font-size: 14px;">What is Phonics</a>
+                <a href="#" style="display: block; padding: 8px 0; color: var(--wire-text); text-decoration: none; font-size: 14px;">Phonics Methods</a>
+                <a href="#" style="display: block; padding: 8px 0; color: var(--wire-text); text-decoration: none; font-size: 14px;">Phonemic Awareness</a>
+                <a href="#" style="display: block; padding: 8px 0; color: var(--wire-text); text-decoration: none; font-size: 14px;">Milestones</a>
+              </div>
+            </div>
+
+            <!-- By Skill - Collapsed -->
+            <div style="border-bottom: 1px solid var(--wire-gray-3);">
+              <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; cursor: pointer;">
+                <span>By Skill</span>
+                <span>►</span>
+              </div>
+            </div>
+
+            <!-- For Parents - Collapsed -->
+            <div style="border-bottom: 1px solid var(--wire-gray-3);">
+              <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; cursor: pointer;">
+                <span>For Parents</span>
+                <span>►</span>
+              </div>
+            </div>
+
+            <!-- For Teachers - Collapsed -->
+            <div style="border-bottom: 1px solid var(--wire-gray-3);">
+              <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; cursor: pointer;">
+                <span>For Teachers</span>
+                <span>►</span>
+              </div>
+            </div>
+
+            <!-- More items... -->
+            <div style="padding: 16px; color: var(--wire-gray-4); font-style: italic; font-size: 13px;">
+              ...remaining nav items...
+            </div>
+          </div>
+
+          <div style="padding: 20px; border-top: 2px solid var(--wire-gray-3); background: var(--wire-gray-1);">
+            <button class="wire-button small" style="width: 100%; margin-bottom: 12px;">Newsletter Signup</button>
+            <button class="wire-button small secondary" style="width: 100%;">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-annotation" style="margin-top: 16px;">
+        Drawer: 85% screen width, full height. Accordion expand/collapse. ► (collapsed) / ▼ (expanded). Search and newsletter CTAs at bottom.
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPLEMENTATION NOTES -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Implementation Notes for Developer</div>
+
+      <div class="wire-block highlight">
+        <div class="wire-heading-3 mb-2">Key Requirements</div>
+        <ul style="margin-left: 20px; line-height: 2; font-size: 14px;">
+          <li><strong>All 7 nav items</strong> need unique mega menu content (examples shown: Skills, Parents)</li>
+          <li><strong>Hover delay:</strong> 200ms before opening (prevents accidental triggers)</li>
+          <li><strong>Close behavior:</strong> Click outside, ESC key, or click another nav item</li>
+          <li><strong>Semi-transparent backdrop</strong> when mega menu is open</li>
+          <li><strong>Accessibility:</strong> Keyboard navigation (Tab, Enter, ESC), ARIA labels</li>
+          <li><strong>Mobile hamburger:</strong> Positioned top-right in header</li>
+          <li><strong>Featured content:</strong> Should pull latest from each silo (dynamic)</li>
+        </ul>
+      </div>
+
+      <div class="wire-block" style="margin-top: 24px;">
+        <div class="wire-heading-3 mb-2">Content for Remaining 5 Mega Menus</div>
+        <table style="width: 100%; font-size: 13px;">
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600; width: 180px;">Phonics 101</td>
+            <td style="padding: 12px;">Overview | What is Phonics | Methods | Phonemic Awareness | Letter-Sound Relationships | Milestones | Science of Reading</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600;">For Teachers</td>
+            <td style="padding: 12px;">Start Here | Lesson Plans | Scope & Sequence | Activities | Assessment Tools | Professional Development | Differentiation | Classroom Management</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600;">Struggling Readers</td>
+            <td style="padding: 12px;">Signs of Difficulty | Dyslexia & Phonics | ELL Learners | Reading Intervention | Special Populations | Assessment | When to Seek Help</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+            <td style="padding: 12px; font-weight: 600;">Reviews</td>
+            <td style="padding: 12px;">Latest Reviews | Top-Rated Apps | By Age Group | By Platform | By Price | Curriculum Comparisons | How We Rate</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; font-weight: 600;">Resources</td>
+            <td style="padding: 12px;">Glossary | FAQ | Printable Worksheets | Decodable Books | Video Library | Blog | About Us | Contact</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

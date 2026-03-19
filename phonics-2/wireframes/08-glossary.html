@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary Wireframe - Phonics.org</title>
+  <link rel="stylesheet" href="wireframe-base.css">
+</head>
+<body>
+
+  <div class="wireframe-info">
+    <h1>Glossary Wireframe</h1>
+    <p>Two components: Hub (/glossary/) + Individual term pages (/glossary/[term]/)</p>
+  </div>
+
+  <div class="wireframe-nav">
+    <a href="07-audience-landing.html">← Audience Landing</a>
+    <a href="index.html">All Wireframes</a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="wire-block header solid">
+    <div class="wire-nav-bar" style="padding: 0;">
+      <div class="wire-heading-3" style="margin: 0;">📘 Phonics.org</div>
+      <div class="wire-nav-items">
+        <span class="wire-nav-item">For Teachers</span>
+        <span class="wire-nav-item" style="background: var(--wire-gray-1); font-weight: 700;">Resources ▼</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOSSARY HUB PAGE -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+
+      <!-- Breadcrumb -->
+      <div class="wire-breadcrumb" style="padding: 12px 0;">
+        <a href="#">Home</a> &gt; <strong>Glossary</strong>
+      </div>
+
+      <!-- Hero -->
+      <div class="text-center mb-3">
+        <div class="wire-heading-1 mb-2">Phonics Glossary — Key Terms Explained</div>
+        <p class="wire-text">Clear definitions of 60+ phonics terms, from "alphabetic principle" to "vowel teams"</p>
+      </div>
+
+      <!-- Alphabet Navigation -->
+      <div class="wire-block" style="background: var(--wire-gray-1); position: sticky; top: 80px; z-index: 10;">
+        <div class="wire-label">Jump to Letter</div>
+        <div class="flex gap-1" style="flex-wrap: wrap; margin-top: 12px; justify-content: center;">
+          {['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'].map(letter => (
+            <a href={`#${letter}`} style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: white; border: 1px solid var(--wire-gray-3); border-radius: 6px; text-decoration: none; color: var(--wire-text); font-weight: 600; font-size: 14px; transition: all 0.2s;" onmouseover="this.style.background='var(--wire-blue)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--wire-text)'">{letter}</a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Terms List -->
+      <div style="margin-top: 32px;">
+
+        <!-- Letter A -->
+        <div id="A" style="margin-bottom: 40px;">
+          <div style="background: var(--wire-blue); color: white; padding: 12px 20px; border-radius: 8px; margin-bottom: 16px;">
+            <div class="wire-heading-2" style="margin: 0; color: white;">A</div>
+          </div>
+
+          <div class="wire-block" style="margin-bottom: 12px; background: white; border-style: solid;">
+            <div class="flex-between" style="align-items: flex-start;">
+              <div style="flex: 1;">
+                <div class="wire-heading-3" style="margin-bottom: 6px;">Alphabetic Principle</div>
+                <p class="wire-text-small">The understanding that letters and letter patterns represent the sounds of spoken language.</p>
+              </div>
+              <a href="#" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; margin-left: 16px;">Read more →</a>
+            </div>
+          </div>
+
+          <div class="wire-block" style="margin-bottom: 12px; background: white; border-style: solid;">
+            <div class="flex-between" style="align-items: flex-start;">
+              <div style="flex: 1;">
+                <div class="wire-heading-3" style="margin-bottom: 6px;">Analytic Phonics</div>
+                <p class="wire-text-small">An approach to phonics instruction that teaches students to analyze letter-sound relationships in whole words, rather than in isolation.</p>
+              </div>
+              <a href="#" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; margin-left: 16px;">Read more →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Letter B -->
+        <div id="B" style="margin-bottom: 40px;">
+          <div style="background: var(--wire-blue); color: white; padding: 12px 20px; border-radius: 8px; margin-bottom: 16px;">
+            <div class="wire-heading-2" style="margin: 0; color: white;">B</div>
+          </div>
+
+          <div class="wire-block" style="margin-bottom: 12px; background: white; border-style: solid;">
+            <div class="flex-between" style="align-items: flex-start;">
+              <div style="flex: 1;">
+                <div class="wire-heading-3" style="margin-bottom: 6px;">Blend (Consonant Blend)</div>
+                <p class="wire-text-small">Two or three consonants that appear together in a word, with each consonant retaining its own sound (e.g., "bl" in "black," "str" in "street").</p>
+              </div>
+              <a href="#" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; margin-left: 16px;">Read more →</a>
+            </div>
+          </div>
+
+          <div class="wire-block" style="margin-bottom: 12px; background: white; border-style: solid;">
+            <div class="flex-between" style="align-items: flex-start;">
+              <div style="flex: 1;">
+                <div class="wire-heading-3" style="margin-bottom: 6px;">Blending</div>
+                <p class="wire-text-small">The ability to smoothly combine individual sounds to form a word (e.g., /c/ /a/ /t/ → "cat").</p>
+              </div>
+              <a href="#" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; margin-left: 16px;">Read more →</a>
+            </div>
+          </div>
+
+          <div class="wire-block" style="margin-bottom: 12px; background: white; border-style: solid;">
+            <div class="flex-between" style="align-items: flex-start;">
+              <div style="flex: 1;">
+                <div class="wire-heading-3" style="margin-bottom: 6px;">Breve</div>
+                <p class="wire-text-small">A diacritical mark (˘) placed over a vowel to indicate a short sound (e.g., ă in "cat").</p>
+              </div>
+              <a href="#" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; margin-left: 16px;">Read more →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder for more letters -->
+        <div class="wire-block" style="background: var(--wire-gray-1); padding: 40px; text-align: center;">
+          <div class="wire-text" style="font-style: italic;">
+            ...Letters C through Z continue with same pattern...<br/><br/>
+            Target: 50-80 terms total<br/>
+            Each term: Name + 1-sentence definition + "Read more →" link
+          </div>
+        </div>
+
+      </div>
+      <div class="wire-annotation">All terms visible on single page for crawlability. Each links to dedicated term page.</div>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="background: var(--wire-gray-4); height: 4px; margin: 60px 0;"></div>
+
+  <!-- INDIVIDUAL TERM PAGE EXAMPLE -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+
+      <div class="wire-heading-2 mb-3" style="text-align: center;">Individual Term Page Example</div>
+
+      <!-- Breadcrumb -->
+      <div class="wire-breadcrumb" style="padding: 12px 0;">
+        <a href="#">Home</a> &gt; <a href="#">Glossary</a> &gt; <strong>Phoneme</strong>
+        <div class="wire-annotation">URL: /glossary/phoneme/</div>
+      </div>
+
+      <!-- Term Header -->
+      <div class="text-center mb-3">
+        <div class="wire-heading-1 mb-2">What is a Phoneme?</div>
+        <div class="wire-text-small">Part of the Phonics Glossary</div>
+      </div>
+
+      <!-- Definition Box -->
+      <div class="wire-callout" style="background: #e8f5e9; border-color: var(--wire-green); padding: 24px;">
+        <div style="font-weight: 700; font-size: 16px; margin-bottom: 8px; color: var(--wire-green);">Definition</div>
+        <p style="font-size: 17px; line-height: 1.6; margin: 0;">
+          A <strong>phoneme</strong> is the smallest unit of sound in a language that can distinguish one word from another. For example, the words "cat" and "bat" differ by a single phoneme (/k/ vs. /b/).
+        </p>
+      </div>
+
+      <!-- Body Content -->
+      <div class="wire-block" style="margin-top: 24px; background: white; border-style: solid;">
+        <div class="wire-heading-3 mb-2">Understanding Phonemes</div>
+        <p class="wire-text mb-2">
+          English has approximately 44 phonemes, though the exact number varies by dialect. These 44 sounds are represented by the 26 letters of the alphabet and various letter combinations (graphemes).
+        </p>
+        <p class="wire-text mb-2">
+          Phonemes are written between slashes to distinguish them from letters. For example:
+        </p>
+        <ul style="margin-left: 24px; line-height: 2;">
+          <li>The word "ship" has 3 phonemes: /sh/ /i/ /p/</li>
+          <li>The word "cat" has 3 phonemes: /k/ /a/ /t/</li>
+          <li>The word "box" has 4 phonemes: /b/ /o/ /k/ /s/</li>
+        </ul>
+        <p class="wire-text mt-2">
+          <strong>Why It Matters:</strong> Phonemic awareness — the ability to hear, identify, and manipulate phonemes — is one of the strongest predictors of early reading success. Children who can identify individual phonemes in spoken words find it easier to learn letter-sound correspondences and decode written text.
+        </p>
+      </div>
+
+      <!-- Learn More Section -->
+      <div class="wire-block" style="margin-top: 24px; background: rgba(77, 171, 247, 0.1); border-color: var(--wire-blue);">
+        <div class="wire-heading-3 mb-2">Learn More About Phonemes</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; padding: 12px; background: white; border-radius: 6px; border: 1px solid var(--wire-gray-3);">
+            <span style="font-size: 24px;">→</span>
+            <div style="flex: 1;">
+              <div style="font-weight: 600; color: var(--wire-text); margin-bottom: 2px;">Phonemic Awareness: A Complete Guide</div>
+              <div style="font-size: 12px; color: var(--wire-gray-5);">/phonics/phonemic-awareness/</div>
+            </div>
+          </a>
+
+          <a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; padding: 12px; background: white; border-radius: 6px; border: 1px solid var(--wire-gray-3);">
+            <span style="font-size: 24px;">→</span>
+            <div style="flex: 1;">
+              <div style="font-weight: 600; color: var(--wire-text); margin-bottom: 2px;">Phoneme Counting Activities for Kids</div>
+              <div style="font-size: 12px; color: var(--wire-gray-5);">/skills/phonemic-awareness/counting-activities/</div>
+            </div>
+          </a>
+
+          <a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; padding: 12px; background: white; border-radius: 6px; border: 1px solid var(--wire-gray-3);">
+            <span style="font-size: 24px;">→</span>
+            <div style="flex: 1;">
+              <div style="font-weight: 600; color: var(--wire-text); margin-bottom: 2px;">The Science Behind Phonemic Awareness</div>
+              <div style="font-size: 12px; color: var(--wire-gray-5);">/science-of-reading/phonemic-awareness-research/</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Terms -->
+      <div class="wire-block" style="margin-top: 24px;">
+        <div class="wire-heading-3 mb-2">Related Terms</div>
+        <div class="flex gap-2" style="flex-wrap: wrap;">
+          <a href="#" class="wire-pill purple">Grapheme</a>
+          <a href="#" class="wire-pill purple">Phonemic Awareness</a>
+          <a href="#" class="wire-pill purple">Phonological Awareness</a>
+          <a href="#" class="wire-pill purple">Digraph</a>
+          <a href="#" class="wire-pill purple">Blend</a>
+          <a href="#" class="wire-pill purple">Segmenting</a>
+        </div>
+        <div class="wire-annotation">Pills link to other glossary term pages. Builds internal link network.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PURPOSE & SPECS -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Glossary Purpose & Specifications</div>
+
+      <div class="wire-block highlight">
+        <strong>Dual Purpose:</strong>
+        <ol style="margin: 12px 0 0 20px; line-height: 2;">
+          <li><strong>User Reference Tool:</strong> Readers can look up unfamiliar terms</li>
+          <li><strong>Internal Linking Infrastructure:</strong> Link from first mention in every article to glossary term page (e.g., "A phoneme is the smallest unit..." → /glossary/phoneme/)</li>
+        </ol>
+
+        <div style="margin-top: 24px;">
+          <strong>Schema Markup:</strong>
+          <ul style="margin: 8px 0 0 20px; line-height: 2;">
+            <li>Glossary hub: <code>DefinedTermSet</code></li>
+            <li>Individual term pages: <code>DefinedTerm</code> with <code>name</code>, <code>description</code>, and <code>inDefinedTermSet</code></li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <strong>Content Requirements per Term Page:</strong>
+          <ul style="margin: 8px 0 0 20px; line-height: 2;">
+            <li>300-500 words</li>
+            <li>Clear definition in highlighted box</li>
+            <li>2-3 paragraphs: explanation, examples, why it matters, common misconceptions</li>
+            <li>"Learn More" section linking to 3-5 articles where term is discussed in depth</li>
+            <li>"Related Terms" pills linking to other glossary entries</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <strong>Target Term Count:</strong> 50-80 terms covering all major phonics concepts
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wire-block footer solid">
+    <div class="wireframe-container">
+      <div class="wire-text" style="color: rgba(255,255,255,0.7); text-align: center;">[Global Footer]</div>
+    </div>
+  </div>
+
+</body>
+</html>

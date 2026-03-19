@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audience Landing Page Wireframe - Phonics.org</title>
+  <link rel="stylesheet" href="wireframe-base.css">
+</head>
+<body>
+
+  <div class="wireframe-info">
+    <h1>Audience Landing Page Wireframe (For Parents)</h1>
+    <p>URLs: /for-parents/ and /for-teachers/ | Curated entry points, NOT archives | Schema: CollectionPage</p>
+  </div>
+
+  <div class="wireframe-nav">
+    <a href="06-single-review.html">← Single Review</a>
+    <a href="index.html">All Wireframes</a>
+    <a href="08-glossary.html">Glossary →</a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="wire-block header solid">
+    <div class="wire-nav-bar" style="padding: 0;">
+      <div class="wire-heading-3" style="margin: 0;">📘 Phonics.org</div>
+      <div class="wire-nav-items">
+        <span class="wire-nav-item">Phonics 101</span>
+        <span class="wire-nav-item" style="background: var(--wire-gray-1); font-weight: 700;">For Parents ▼</span>
+        <span class="wire-nav-item">For Teachers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="wire-breadcrumb">
+    <a href="#">Home</a> &gt; <strong>For Parents</strong>
+  </div>
+
+  <!-- HERO -->
+  <div class="wire-section" style="background: linear-gradient(135deg, rgba(81, 207, 102, 0.1), rgba(77, 171, 247, 0.1));">
+    <div class="wireframe-container text-center" style="padding: 60px 20px;">
+      <div class="wire-heading-1 mb-2" style="max-width: 800px; margin: 0 auto 16px;">Phonics for Parents: Your Guide to Teaching Your Child to Read</div>
+      <p class="wire-text" style="font-size: 18px; max-width: 600px; margin: 0 auto 32px; color: var(--wire-gray-5);">
+        Everything you need to support your child's reading journey — no teaching degree required
+      </p>
+      <button class="wire-button">Start Here: What is Phonics? →</button>
+      <div class="wire-annotation">Warm, empathetic tone. Illustration of parent reading with child (to be created by designer).</div>
+    </div>
+  </div>
+
+  <!-- AGE-BASED READING PATHS -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 text-center mb-2">Choose Your Child's Reading Stage</div>
+      <p class="wire-text text-center mb-3">Get a personalized learning path with articles and activities for your child's age</p>
+
+      <div class="wire-grid wire-grid-4">
+
+        <div class="wire-card" style="text-align: center; cursor: pointer; transition: all 0.2s; border: 2px solid var(--wire-gray-3);" onmouseover="this.style.borderColor='var(--wire-green)'" onmouseout="this.style.borderColor='var(--wire-gray-3)'">
+          <div style="font-size: 48px; margin-bottom: 12px;">🌱</div>
+          <div class="wire-heading-3" style="font-size: 17px; margin-bottom: 4px;">Pre-Readers</div>
+          <div style="color: var(--wire-green); font-weight: 700; font-size: 15px; margin-bottom: 8px;">Ages 3-4</div>
+          <p class="wire-text-small">Letter recognition & phonemic awareness basics</p>
+        </div>
+
+        <div class="wire-card" style="text-align: center; cursor: pointer; border: 2px solid var(--wire-gray-3);">
+          <div style="font-size: 48px; margin-bottom: 12px;">📖</div>
+          <div class="wire-heading-3" style="font-size: 17px; margin-bottom: 4px;">Beginning Readers</div>
+          <div style="color: var(--wire-blue); font-weight: 700; font-size: 15px; margin-bottom: 8px;">Ages 4-5</div>
+          <p class="wire-text-small">Letter sounds, CVC words, & blending</p>
+        </div>
+
+        <div class="wire-card" style="text-align: center; cursor: pointer; border: 2px solid var(--wire-gray-3);">
+          <div style="font-size: 48px; margin-bottom: 12px;">📚</div>
+          <div class="wire-heading-3" style="font-size: 17px; margin-bottom: 4px;">Developing Readers</div>
+          <div style="color: var(--wire-orange); font-weight: 700; font-size: 15px; margin-bottom: 8px;">Ages 5-7</div>
+          <p class="wire-text-small">Blends, digraphs, & fluency building</p>
+        </div>
+
+        <div class="wire-card" style="text-align: center; cursor: pointer; border: 2px solid var(--wire-gray-3);">
+          <div style="font-size: 48px; margin-bottom: 12px;">🎓</div>
+          <div class="wire-heading-3" style="font-size: 17px; margin-bottom: 4px;">Advanced Readers</div>
+          <div style="color: var(--wire-purple); font-weight: 700; font-size: 15px; margin-bottom: 8px;">Ages 7+</div>
+          <p class="wire-text-small">Multisyllable words & spelling patterns</p>
+        </div>
+
+      </div>
+      <div class="wire-annotation">Each clickable. Expands to show curated reading path below (progressive disclosure).</div>
+    </div>
+  </div>
+
+  <!-- EXPANDED PATH VIEW (EXAMPLE) -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-block" style="border: 3px solid var(--wire-blue); background: rgba(77, 171, 247, 0.05);">
+        <div class="flex-between mb-3">
+          <div>
+            <div style="display: inline-block; background: var(--wire-blue); color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 8px;">📖 AGES 4-5: BEGINNING READERS</div>
+            <div class="wire-heading-2" style="margin: 0;">Your Personalized Reading Path</div>
+          </div>
+          <button style="background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
+        </div>
+
+        <p class="wire-text mb-3">Follow these 6 articles in order to build a strong foundation for your beginning reader:</p>
+
+        <div style="display: flex; flex-direction: column; gap: 1px; background: var(--wire-gray-3); border-radius: 8px; overflow: hidden;">
+
+          <div class="flex gap-2" style="background: white; padding: 16px; align-items: center;">
+            <div style="background: var(--wire-blue); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
+            <div style="flex: 1;">
+              <div class="wire-heading-3" style="font-size: 15px; margin-bottom: 2px;">What is Phonics? An Introduction for Parents</div>
+              <span class="wire-pill purple" style="font-size: 10px;">Phonics 101</span>
+              <span class="wire-text-small" style="margin-left: 8px;">8 min read</span>
+            </div>
+            <a href="#" style="color: var(--wire-blue); font-weight: 600; text-decoration: none; font-size: 14px;">Read →</a>
+          </div>
+
+          <div class="flex gap-2" style="background: white; padding: 16px; align-items: center;">
+            <div style="background: var(--wire-blue); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
+            <div style="flex: 1;">
+              <div class="wire-heading-3" style="font-size: 15px; margin-bottom: 2px;">Letter-Sound Relationships: The Foundation of Reading</div>
+              <span class="wire-pill blue" style="font-size: 10px;">Skills</span>
+              <span class="wire-text-small" style="margin-left: 8px;">10 min read</span>
+            </div>
+            <a href="#" style="color: var(--wire-blue); font-weight: 600; text-decoration: none; font-size: 14px;">Read →</a>
+          </div>
+
+          <div class="flex gap-2" style="background: white; padding: 16px; align-items: center;">
+            <div style="background: var(--wire-blue); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
+            <div style="flex: 1;">
+              <div class="wire-heading-3" style="font-size: 15px; margin-bottom: 2px;">CVC Words: A Complete Guide for Parents</div>
+              <span class="wire-pill blue" style="font-size: 10px;">Skills</span>
+              <span class="wire-text-small" style="margin-left: 8px;">12 min read</span>
+            </div>
+            <a href="#" style="color: var(--wire-blue); font-weight: 600; text-decoration: none; font-size: 14px;">Read →</a>
+          </div>
+
+          <div class="wire-block" style="background: var(--wire-gray-1); margin: 0; text-align: center; padding: 20px;">
+            <div class="wire-text" style="font-style: italic;">...3 more articles in sequence:<br/>
+            4. 10 Home Activities for Beginning Readers<br/>
+            5. Best Phonics Apps for Ages 4-5<br/>
+            6. When to Worry About Reading Progress
+            </div>
+          </div>
+
+        </div>
+        <div class="wire-annotation">Appears when user clicks age group above. Each links into existing silo content — NO unique articles here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPULAR RESOURCES -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Popular Resources for Parents</div>
+
+      <div class="wire-grid wire-grid-3">
+
+        <div class="wire-card">
+          <div class="wire-card-image">🖼️</div>
+          <span class="wire-pill green" style="font-size: 10px;">At Home</span>
+          <div class="wire-heading-3" style="font-size: 15px; margin-top: 8px;">Teaching Phonics at Home: Where to Start</div>
+          <p class="wire-text-small">Step-by-step guide for parents new to phonics instruction</p>
+          <div class="wire-text-small" style="color: var(--wire-gray-4); margin-top: 8px;">10 min read</div>
+        </div>
+
+        <div class="wire-card">
+          <div class="wire-card-image">🖼️</div>
+          <span class="wire-pill blue" style="font-size: 10px;">Skills</span>
+          <div class="wire-heading-3" style="font-size: 15px; margin-top: 8px;">CVC Words: The Complete Guide</div>
+          <p class="wire-text-small">Everything you need to know about consonant-vowel-consonant words</p>
+          <div class="wire-text-small" style="color: var(--wire-gray-4); margin-top: 8px;">15 min read</div>
+        </div>
+
+        <div class="wire-card">
+          <div class="wire-card-image">🖼️</div>
+          <span class="wire-pill orange" style="font-size: 10px;">Reviews</span>
+          <div class="wire-heading-3" style="font-size: 15px; margin-top: 8px;">Best Phonics Apps for Kids 2026</div>
+          <p class="wire-text-small">Top-rated apps reviewed by education experts</p>
+          <div class="wire-text-small" style="color: var(--wire-gray-4); margin-top: 8px;">12 min read</div>
+        </div>
+
+        <div class="wire-card">
+          <div class="wire-card-image">🖼️</div>
+          <span class="wire-pill green" style="font-size: 10px;">At Home</span>
+          <div class="wire-heading-3" style="font-size: 15px; margin-top: 8px;">20 Fun Phonics Activities for Home</div>
+          <p class="wire-text-small">No-prep activities using household items</p>
+          <div class="wire-text-small" style="color: var(--wire-gray-4); margin-top: 8px;">8 min read</div>
+        </div>
+
+        <div class="wire-card">
+          <div class="wire-card-image">🖼️</div>
+          <span class="wire-pill gray" style="font-size: 10px;">Support</span>
+          <div class="wire-heading-3" style="font-size: 15px; margin-top: 8px;">When to Seek Help for Reading Struggles</div>
+          <p class="wire-text-small">Signs your child may need additional support</p>
+          <div class="wire-text-small" style="color: var(--wire-gray-4); margin-top: 8px;">10 min read</div>
+        </div>
+
+        <div class="wire-card">
+          <div class="wire-card-image">🖼️</div>
+          <span class="wire-pill purple" style="font-size: 10px;">Science</span>
+          <div class="wire-heading-3" style="font-size: 15px; margin-top: 8px;">The Science of Reading Explained</div>
+          <p class="wire-text-small">What research tells us about how children learn to read</p>
+          <div class="wire-text-small" style="color: var(--wire-gray-4); margin-top: 8px;">12 min read</div>
+        </div>
+
+      </div>
+      <div class="wire-annotation">Curated selection - different for parents vs teachers. Each links to silo content.</div>
+    </div>
+  </div>
+
+  <!-- TOP-RATED APPS -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Recommended Apps for Parents</div>
+
+      <div class="wire-grid wire-grid-3">
+
+        <div class="wire-card">
+          <div class="flex-between mb-2">
+            <div class="wire-image icon" style="width: 50px; height: 50px; font-size: 20px;">📱</div>
+            <div class="wire-score" style="width: 50px; height: 50px; font-size: 18px;">4.7</div>
+          </div>
+          <div class="wire-heading-3" style="font-size: 15px;">Hooked on Phonics</div>
+          <p class="wire-text-small" style="margin: 8px 0;">Best for systematic home instruction</p>
+          <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px;">Read Review →</a>
+        </div>
+
+        <div class="wire-card">
+          <div class="flex-between mb-2">
+            <div class="wire-image icon" style="width: 50px; height: 50px; font-size: 20px;">📱</div>
+            <div class="wire-score" style="width: 50px; height: 50px; font-size: 18px;">4.6</div>
+          </div>
+          <div class="wire-heading-3" style="font-size: 15px;">Homer</div>
+          <p class="wire-text-small" style="margin: 8px 0;">Best for personalized learning paths</p>
+          <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px;">Read Review →</a>
+        </div>
+
+        <div class="wire-card">
+          <div class="flex-between mb-2">
+            <div class="wire-image icon" style="width: 50px; height: 50px; font-size: 20px;">📱</div>
+            <div class="wire-score" style="width: 50px; height: 50px; font-size: 18px;">4.3</div>
+          </div>
+          <div class="wire-heading-3" style="font-size: 15px;">Teach Your Monster</div>
+          <p class="wire-text-small" style="margin: 8px 0;">Best free option for families</p>
+          <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px;">Read Review →</a>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="#" style="color: var(--wire-blue); font-weight: 600; text-decoration: none; font-size: 15px;">View All 58 App Reviews →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER CTA -->
+  <div class="wire-section" style="background: var(--wire-green); padding: 60px 20px;">
+    <div class="wireframe-container text-center">
+      <div class="wire-heading-2" style="color: white; margin-bottom: 12px;">Get Parenting Tips Delivered Weekly</div>
+      <p class="wire-text" style="color: rgba(255,255,255,0.95); margin-bottom: 24px; font-size: 16px;">Join 5,000+ parents receiving expert phonics guidance every week</p>
+      <div class="flex-center gap-2" style="flex-wrap: wrap;">
+        <input type="email" placeholder="Enter your email" style="padding: 14px 20px; border-radius: 6px; border: none; width: 300px; font-size: 14px;">
+        <button class="wire-button" style="background: #2c3e50; padding: 14px 32px;">Subscribe</button>
+      </div>
+      <p class="wire-text-small" style="color: rgba(255,255,255,0.8); margin-top: 12px;">Audience pre-selected as "Parent" in backend</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wire-block footer solid">
+    <div class="wireframe-container">
+      <div class="wire-text" style="color: rgba(255,255,255,0.7); text-align: center;">[Global Footer]</div>
+    </div>
+  </div>
+
+  <!-- NOTES FOR TEACHERS VERSION -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Adaptation for /for-teachers/ Page</div>
+      <div class="wire-block highlight">
+        <strong>Same structure, different content:</strong>
+        <ul style="margin: 12px 0 0 20px; line-height: 2;">
+          <li><strong>Hero:</strong> "Phonics for Teachers: Research-Based Strategies for Your Classroom"</li>
+          <li><strong>Pathways:</strong> Instead of ages, use teaching contexts (New to phonics instruction, Planning scope & sequence, Differentiating, Assessing, PD resources)</li>
+          <li><strong>Popular Resources:</strong> Curate lesson plans, classroom activities, assessment tools, scope & sequence guides</li>
+          <li><strong>Recommended Tools:</strong> Classroom-focused apps/curricula instead of home apps</li>
+          <li><strong>Newsletter:</strong> "Get Teaching Strategies Delivered Weekly" with audience pre-selected as "Teacher"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

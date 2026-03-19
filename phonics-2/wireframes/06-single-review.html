@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Review Wireframe - Phonics.org</title>
+  <link rel="stylesheet" href="wireframe-base.css">
+</head>
+<body>
+
+  <div class="wireframe-info">
+    <h1>Single Review Page Wireframe</h1>
+    <p>URL: /reviews/[app-name]/ | Standardized review template | Schema: Review, Product, AggregateRating</p>
+  </div>
+
+  <div class="wireframe-nav">
+    <a href="05-reviews-hub.html">← Reviews Hub</a>
+    <a href="index.html">All Wireframes</a>
+    <a href="07-audience-landing.html">Audience Landing →</a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="wire-block header solid">
+    <div class="wire-nav-bar" style="padding: 0;">
+      <div class="wire-heading-3" style="margin: 0;">📘 Phonics.org</div>
+      <div class="wire-nav-items">
+        <span class="wire-nav-item">For Parents</span>
+        <span class="wire-nav-item" style="background: var(--wire-gray-1);">Reviews ▼</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="wire-breadcrumb">
+    <a href="#">Home</a> &gt; <a href="#">Reviews</a> &gt; <strong>Hooked on Phonics Review</strong>
+  </div>
+
+  <!-- REVIEW HEADER -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="flex gap-3" style="align-items: center;">
+
+        <!-- App Icon -->
+        <div class="wire-image icon" style="width: 100px; height: 100px; font-size: 40px; flex-shrink: 0;">📱</div>
+
+        <!-- Title & Meta -->
+        <div style="flex: 1;">
+          <div class="wire-heading-1" style="font-size: 32px; margin-bottom: 8px;">Hooked on Phonics Review (2026)</div>
+          <div class="mb-2">
+            <span class="wire-pill gray">Ages 3-8</span>
+            <span class="wire-pill gray">iOS & Android</span>
+            <span class="wire-pill gray">$6.99/mo</span>
+          </div>
+          <div class="wire-text-small">
+            <strong>Reviewed by:</strong> Sarah Johnson, M.Ed. · <strong>Updated:</strong> Feb 2026
+          </div>
+        </div>
+
+        <!-- Score Badge -->
+        <div style="text-align: center; flex-shrink: 0;">
+          <div class="wire-score" style="width: 100px; height: 100px; font-size: 36px;">4.7</div>
+          <div class="wire-text-small" style="margin-top: 8px; font-weight: 600;">Overall Score</div>
+        </div>
+
+      </div>
+      <div class="wire-annotation">Score badge dominant. App icon + metadata prominent. Updated date for freshness.</div>
+    </div>
+  </div>
+
+  <!-- SCORE BREAKDOWN -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Score Breakdown</div>
+
+      <div class="wire-block" style="background: white; padding: 24px;">
+        <div class="flex gap-2" style="align-items: center; margin-bottom: 16px;">
+          <div style="min-width: 180px; font-weight: 600;">Instruction Quality</div>
+          <div style="flex: 1; background: var(--wire-gray-2); border-radius: 8px; height: 24px; position: relative; overflow: hidden;">
+            <div style="background: var(--wire-green); height: 100%; width: 96%; border-radius: 8px;"></div>
+          </div>
+          <div style="min-width: 40px; text-align: right; font-weight: 700; font-size: 16px;">4.8</div>
+        </div>
+
+        <div class="flex gap-2" style="align-items: center; margin-bottom: 16px;">
+          <div style="min-width: 180px; font-weight: 600;">Usability</div>
+          <div style="flex: 1; background: var(--wire-gray-2); border-radius: 8px; height: 24px; position: relative; overflow: hidden;">
+            <div style="background: var(--wire-green); height: 100%; width: 90%; border-radius: 8px;"></div>
+          </div>
+          <div style="min-width: 40px; text-align: right; font-weight: 700; font-size: 16px;">4.5</div>
+        </div>
+
+        <div class="flex gap-2" style="align-items: center; margin-bottom: 16px;">
+          <div style="min-width: 180px; font-weight: 600;">Engagement</div>
+          <div style="flex: 1; background: var(--wire-gray-2); border-radius: 8px; height: 24px; position: relative; overflow: hidden;">
+            <div style="background: var(--wire-green); height: 100%; width: 94%; border-radius: 8px;"></div>
+          </div>
+          <div style="min-width: 40px; text-align: right; font-weight: 700; font-size: 16px;">4.7</div>
+        </div>
+
+        <div class="flex gap-2" style="align-items: center; margin-bottom: 16px;">
+          <div style="min-width: 180px; font-weight: 600;">Content Depth</div>
+          <div style="flex: 1; background: var(--wire-gray-2); border-radius: 8px; height: 24px; position: relative; overflow: hidden;">
+            <div style="background: var(--wire-green); height: 100%; width: 92%; border-radius: 8px;"></div>
+          </div>
+          <div style="min-width: 40px; text-align: right; font-weight: 700; font-size: 16px;">4.6</div>
+        </div>
+
+        <div class="flex gap-2" style="align-items: center;">
+          <div style="min-width: 180px; font-weight: 600;">Value for Money</div>
+          <div style="flex: 1; background: var(--wire-gray-2); border-radius: 8px; height: 24px; position: relative; overflow: hidden;">
+            <div style="background: var(--wire-green); height: 100%; width: 86%; border-radius: 8px;"></div>
+          </div>
+          <div style="min-width: 40px; text-align: right; font-weight: 700; font-size: 16px;">4.3</div>
+        </div>
+      </div>
+      <div class="wire-annotation">Visual bar charts. These scoring criteria match existing rubric - make them more visually prominent.</div>
+    </div>
+  </div>
+
+  <!-- QUICK VERDICT + PROS/CONS -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+
+      <!-- Verdict Box -->
+      <div class="wire-callout" style="background: #e8f5e9; border-color: var(--wire-green); padding: 20px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <span style="font-size: 24px;">✓</span>
+          <strong style="font-size: 18px;">Our Verdict</strong>
+        </div>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">
+          Hooked on Phonics delivers a well-structured, research-backed phonics curriculum with excellent engagement features and strong progress tracking. Best for families wanting a comprehensive, systematic at-home program with proven results.
+        </p>
+      </div>
+      <div class="wire-annotation">2-3 sentences max. Critical for GEO/AI extraction. Direct answer format.</div>
+
+      <!-- Pros/Cons -->
+      <div class="wire-grid wire-grid-2 mt-3">
+        <div class="wire-block" style="background: rgba(81, 207, 102, 0.1); border-color: var(--wire-green);">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+            <span style="font-size: 24px; color: var(--wire-green);">✓</span>
+            <strong style="font-size: 16px; color: var(--wire-green);">Pros</strong>
+          </div>
+          <ul style="margin-left: 20px; line-height: 2; font-size: 14px;">
+            <li>Systematic scope & sequence aligned to research</li>
+            <li>Offline mode available for travel</li>
+            <li>Detailed progress tracking for parents</li>
+            <li>High engagement with rewards system</li>
+            <li>Includes workbooks and physical materials</li>
+          </ul>
+        </div>
+
+        <div class="wire-block" style="background: rgba(220, 53, 69, 0.05); border-color: #dc3545;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+            <span style="font-size: 24px; color: #dc3545;">✗</span>
+            <strong style="font-size: 16px; color: #dc3545;">Cons</strong>
+          </div>
+          <ul style="margin-left: 20px; line-height: 2; font-size: 14px;">
+            <li>Subscription only (no one-time purchase option)</li>
+            <li>Limited teacher/classroom tools</li>
+            <li>Can feel repetitive for advanced readers</li>
+            <li>American accent only</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DETAILED REVIEW BODY -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Detailed Review</div>
+
+      <div class="wire-block" style="background: white; padding: 24px;">
+        <!-- Section 1 -->
+        <div class="wire-heading-3 mb-2">Instruction Quality: 4.8 / 5</div>
+        <p class="wire-text mb-2">
+          Hooked on Phonics follows a systematic, explicit phonics approach grounded in the Science of Reading. The curriculum progresses from letter-sound relationships through complex phonics patterns in a carefully sequenced manner...
+        </p>
+        <div class="wire-image small" style="margin: 16px 0;" data-label="Screenshot: Lesson interface">🖼️</div>
+        <p class="wire-text mb-3">
+          More content analyzing instruction quality, citing research, showing examples...
+        </p>
+
+        <!-- Section 2 -->
+        <div class="wire-heading-3 mb-2 mt-3">Usability: 4.5 / 5</div>
+        <p class="wire-text mb-2">
+          The app interface is clean and intuitive, though the desktop version offers a slightly better experience than the mobile app...
+        </p>
+
+        <!-- Section 3-5 -->
+        <div class="wire-block" style="background: var(--wire-gray-1); margin: 24px 0; padding: 20px;">
+          <div class="wire-text" style="font-style: italic;">
+            ...Additional H3 sections for each scoring criterion:<br/>
+            • Engagement<br/>
+            • Content Depth<br/>
+            • Value for Money<br/><br/>
+            Each with 2-3 paragraphs + screenshots where relevant
+          </div>
+        </div>
+
+        <!-- Who It's For -->
+        <div class="wire-heading-3 mb-2">Who Should Use Hooked on Phonics?</div>
+        <div class="wire-grid wire-grid-2 gap-2">
+          <div class="wire-callout parent">
+            <strong>✓ Best for:</strong>
+            <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8; font-size: 14px;">
+              <li>Ages 3-8 learning to read</li>
+              <li>Families wanting structured curriculum</li>
+              <li>Parents new to teaching phonics</li>
+              <li>Kids who enjoy games and rewards</li>
+            </ul>
+          </div>
+          <div class="wire-callout" style="border-color: #dc3545; background: rgba(220, 53, 69, 0.05);">
+            <strong>✗ Skip if:</strong>
+            <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8; font-size: 14px;">
+              <li>You prefer one-time purchases</li>
+              <li>You need classroom management tools</li>
+              <li>Your child is already reading fluently</li>
+              <li>You want customizable lesson plans</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ALTERNATIVES TO CONSIDER -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Alternatives to Consider</div>
+
+      <div class="wire-grid wire-grid-3">
+        <div class="wire-card">
+          <div class="flex-between mb-2">
+            <div class="wire-image icon" style="width: 50px; height: 50px; font-size: 20px;">📱</div>
+            <div class="wire-score" style="width: 50px; height: 50px; font-size: 18px;">4.6</div>
+          </div>
+          <div class="wire-heading-3" style="font-size: 15px;">Homer</div>
+          <p class="wire-text-small" style="margin: 8px 0;">If you want more personalization and a gentler learning curve</p>
+          <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px;">Read Review →</a>
+        </div>
+
+        <div class="wire-card">
+          <div class="flex-between mb-2">
+            <div class="wire-image icon" style="width: 50px; height: 50px; font-size: 20px;">📱</div>
+            <div class="wire-score" style="width: 50px; height: 50px; font-size: 18px;">4.5</div>
+          </div>
+          <div class="wire-heading-3" style="font-size: 15px;">ABCmouse</div>
+          <p class="wire-text-small" style="margin: 8px 0;">If you want a complete early learning platform beyond just phonics</p>
+          <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px;">Read Review →</a>
+        </div>
+
+        <div class="wire-card">
+          <div class="flex-between mb-2">
+            <div class="wire-image icon" style="width: 50px; height: 50px; font-size: 20px;">📱</div>
+            <div class="wire-score" style="width: 50px; height: 50px; font-size: 18px;">4.3</div>
+          </div>
+          <div class="wire-heading-3" style="font-size: 15px;">Teach Your Monster</div>
+          <p class="wire-text-small" style="margin: 8px 0;">If you want a completely free option with game-based learning</p>
+          <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px;">Read Review →</a>
+        </div>
+      </div>
+      <div class="wire-annotation">Builds internal link network within reviews silo. "If you want X instead, try Y" format.</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wire-block footer solid">
+    <div class="wireframe-container">
+      <div class="wire-text" style="color: rgba(255,255,255,0.7); text-align: center;">[Global Footer]</div>
+    </div>
+  </div>
+
+</body>
+</html>

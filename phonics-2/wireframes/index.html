@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phonics.org Wireframes - Complete Site Design</title>
+  <link rel="stylesheet" href="wireframe-base.css">
+  <style>
+    .wireframe-card {
+      background: white;
+      border: 2px solid var(--wire-gray-3);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+    .wireframe-card:hover {
+      border-color: var(--wire-blue);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .wireframe-card-number {
+      background: var(--wire-blue);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .wireframe-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--wire-text);
+      margin-bottom: 8px;
+    }
+    .wireframe-card-desc {
+      font-size: 14px;
+      color: var(--wire-gray-5);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .wireframe-card-url {
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--wire-gray-4);
+      background: var(--wire-gray-1);
+      padding: 6px 10px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 16px;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wireframe-info" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+    <h1 style="font-size: 32px;">Phonics.org Complete Website Wireframes</h1>
+    <p style="font-size: 16px; opacity: 0.95;">Interactive HTML wireframes for designer handoff | All 8 page templates</p>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+
+      <div class="hero-banner">
+        <div style="font-size: 64px; margin-bottom: 20px;">📐</div>
+        <h2 style="font-size: 36px; margin-bottom: 16px; font-weight: 800;">Product Design Requirements</h2>
+        <p style="font-size: 18px; max-width: 700px; margin: 0 auto 32px; opacity: 0.95;">
+          This wireframe system documents the complete information architecture, navigation system, and page layouts for the phonics.org redesign. Each wireframe includes detailed specifications, annotations, and implementation notes.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <div style="background: rgba(255,255,255,0.2); padding: 16px 24px; border-radius: 8px; backdrop-filter: blur(10px);">
+            <div style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">8</div>
+            <div style="font-size: 14px; opacity: 0.9;">Page Templates</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.2); padding: 16px 24px; border-radius: 8px; backdrop-filter: blur(10px);">
+            <div style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">7</div>
+            <div style="font-size: 14px; opacity: 0.9;">Content Silos</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.2); padding: 16px 24px; border-radius: 8px; backdrop-filter: blur(10px);">
+            <div style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">200+</div>
+            <div style="font-size: 14px; opacity: 0.9;">Existing Articles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Overview -->
+      <div class="wire-grid wire-grid-2" style="margin-bottom: 40px;">
+        <div class="wire-block" style="background: #e3f2fd; border-color: var(--wire-blue);">
+          <div class="wire-label">Project Goal</div>
+          <div style="margin-top: 12px; font-size: 15px; line-height: 1.7;">
+            Transform phonics.org from a flat blog structure into a hierarchical, topic-clustered authority site that establishes topical depth, serves dual audiences (parents + teachers), and generates qualified leads for reading.com.
+          </div>
+        </div>
+
+        <div class="wire-block" style="background: #fff3e0; border-color: var(--wire-orange);">
+          <div class="wire-label">Success Metrics</div>
+          <ul style="margin: 12px 0 0 20px; font-size: 14px; line-height: 2;">
+            <li>All content reachable in ≤ 3 clicks</li>
+            <li>Average 5-8 internal links per page</li>
+            <li>30% increase in organic traffic</li>
+            <li>Improved AI citation/ranking (GEO)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- How to Use -->
+      <div class="wire-block highlight" style="margin-bottom: 40px;">
+        <div class="wire-heading-3 mb-2">How to Use These Wireframes</div>
+        <ol style="margin-left: 20px; line-height: 2; font-size: 15px;">
+          <li><strong>Review each wireframe</strong> by clicking the cards below</li>
+          <li><strong>Read annotations</strong> (marked with 📐) for design specifications</li>
+          <li><strong>Note the component reuse</strong> — many elements repeat across pages</li>
+          <li><strong>Check responsive notes</strong> — all layouts adapt to mobile</li>
+          <li><strong>Reference the PDR document</strong> (phonics-org-design-brief.md) for complete specifications</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WIREFRAME CARDS -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3 text-center">All Wireframes</div>
+
+      <div class="wire-grid wire-grid-2" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+
+        <!-- 01 Homepage -->
+        <a href="01-homepage.html" class="wireframe-card">
+          <div class="wireframe-card-number">1</div>
+          <div class="wireframe-card-title">Homepage</div>
+          <div class="wireframe-card-desc">
+            Authority gateway routing users to silos. Includes hero, silo cards, featured content, reviews spotlight, age pathways, latest articles, trust bar, and newsletter CTA.
+          </div>
+          <div class="wireframe-card-url">URL: /</div>
+        </a>
+
+        <!-- 02 Mega Menu -->
+        <a href="02-mega-menu.html" class="wireframe-card">
+          <div class="wireframe-card-number">2</div>
+          <div class="wireframe-card-title">Mega Menu Navigation</div>
+          <div class="wireframe-card-desc">
+            The most important architectural change. 4-column dropdown panels exposing full silo structure. Includes desktop hover and mobile accordion versions.
+          </div>
+          <div class="wireframe-card-url">7 unique menus</div>
+        </a>
+
+        <!-- 03 Pillar Page -->
+        <a href="03-pillar-page.html" class="wireframe-card">
+          <div class="wireframe-card-number">3</div>
+          <div class="wireframe-card-title">Pillar / Hub Page</div>
+          <div class="wireframe-card-desc">
+            Comprehensive 3,000-5,000 word overview linking to all cluster pages in the silo. Includes TOC sidebar, cluster CTA cards, FAQ accordion, and cross-silo links.
+          </div>
+          <div class="wireframe-card-url">Template for 7 silos</div>
+        </a>
+
+        <!-- 04 Article Page -->
+        <a href="04-article-page.html" class="wireframe-card">
+          <div class="wireframe-card-number">4</div>
+          <div class="wireframe-card-title">Article / Cluster Page</div>
+          <div class="wireframe-card-desc">
+            Individual articles within silos. Two-column layout (65/35) with sticky sidebar, key answer box, audience callouts, related articles, and next steps navigation.
+          </div>
+          <div class="wireframe-card-url">URL: /[silo]/[topic]/[article]/</div>
+        </a>
+
+        <!-- 05 Reviews Hub -->
+        <a href="05-reviews-hub.html" class="wireframe-card">
+          <div class="wireframe-card-number">5</div>
+          <div class="wireframe-card-title">Reviews Hub</div>
+          <div class="wireframe-card-desc">
+            Filterable directory of 58+ app reviews. Includes editor's picks, sticky filter bar (age, platform, price, rating), review grid, pagination, and comparison tables.
+          </div>
+          <div class="wireframe-card-url">URL: /reviews/</div>
+        </a>
+
+        <!-- 06 Single Review -->
+        <a href="06-single-review.html" class="wireframe-card">
+          <div class="wireframe-card-number">6</div>
+          <div class="wireframe-card-title">Single Review Page</div>
+          <div class="wireframe-card-desc">
+            Standardized app review template. Prominent score badge, visual score breakdown, quick verdict, pros/cons, detailed review body, and alternatives section.
+          </div>
+          <div class="wireframe-card-url">URL: /reviews/[app-name]/</div>
+        </a>
+
+        <!-- 07 Audience Landing -->
+        <a href="07-audience-landing.html" class="wireframe-card">
+          <div class="wireframe-card-number">7</div>
+          <div class="wireframe-card-title">Audience Landing Page</div>
+          <div class="wireframe-card-desc">
+            Curated entry points for parents/teachers (NOT archives). Age-based reading paths with progressive disclosure, popular resources grid, and recommended apps.
+          </div>
+          <div class="wireframe-card-url">URLs: /for-parents/, /for-teachers/</div>
+        </a>
+
+        <!-- 08 Glossary -->
+        <a href="08-glossary.html" class="wireframe-card">
+          <div class="wireframe-card-number">8</div>
+          <div class="wireframe-card-title">Glossary</div>
+          <div class="wireframe-card-desc">
+            Two-part system: Hub with alphabetical index of 50-80 terms, plus individual term pages (300-500 words each) with definitions, explanations, and related links.
+          </div>
+          <div class="wireframe-card-url">URLs: /glossary/, /glossary/[term]/</div>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ARCHITECTURE OVERVIEW -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Site Architecture Overview</div>
+
+      <div class="wire-block" style="background: white; padding: 32px;">
+        <div class="wire-heading-3 mb-3">7 Content Silos (Primary Navigation)</div>
+
+        <table style="width: 100%; font-size: 14px; border-collapse: collapse;">
+          <thead style="background: var(--wire-gray-2);">
+            <tr style="border-bottom: 2px solid var(--wire-gray-4);">
+              <th style="text-align: left; padding: 12px; font-weight: 700;">Silo Name</th>
+              <th style="text-align: left; padding: 12px; font-weight: 700;">URL Root</th>
+              <th style="text-align: left; padding: 12px; font-weight: 700;">Purpose</th>
+              <th style="text-align: center; padding: 12px; font-weight: 700;">Target Articles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;"><strong>Phonics 101</strong></td>
+              <td style="padding: 12px;"><code>/phonics/</code></td>
+              <td style="padding: 12px;">Core phonics concepts, methods, science</td>
+              <td style="padding: 12px; text-align: center;">20-25</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;"><strong>Phonics Skills</strong></td>
+              <td style="padding: 12px;"><code>/skills/</code></td>
+              <td style="padding: 12px;">Individual skill deep-dives (CVC, blends, digraphs)</td>
+              <td style="padding: 12px; text-align: center;">25-30</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;"><strong>Teaching Phonics</strong></td>
+              <td style="padding: 12px;"><code>/teaching/</code></td>
+              <td style="padding: 12px;">Classroom strategies, lesson plans, scope & sequence</td>
+              <td style="padding: 12px; text-align: center;">15-20</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;"><strong>Learning at Home</strong></td>
+              <td style="padding: 12px;"><code>/home/</code></td>
+              <td style="padding: 12px;">Parent guides, activities, milestones by age</td>
+              <td style="padding: 12px; text-align: center;">15-20</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;"><strong>Struggling Readers</strong></td>
+              <td style="padding: 12px;"><code>/support/</code></td>
+              <td style="padding: 12px;">Dyslexia, ELL, intervention, assessment</td>
+              <td style="padding: 12px; text-align: center;">15-20</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;"><strong>Reviews</strong></td>
+              <td style="padding: 12px;"><code>/reviews/</code></td>
+              <td style="padding: 12px;">App reviews, curriculum comparisons</td>
+              <td style="padding: 12px; text-align: center;">60+</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px;"><strong>Science of Reading</strong></td>
+              <td style="padding: 12px;"><code>/science-of-reading/</code></td>
+              <td style="padding: 12px;">Research, policy, reading brain, five pillars</td>
+              <td style="padding: 12px; text-align: center;">10-15</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="wire-block" style="margin-top: 24px; background: white; padding: 32px;">
+        <div class="wire-heading-3 mb-3">URL Structure Pattern</div>
+
+        <table style="width: 100%; font-size: 14px; border-collapse: collapse;">
+          <thead style="background: var(--wire-gray-2);">
+            <tr style="border-bottom: 2px solid var(--wire-gray-4);">
+              <th style="text-align: left; padding: 12px; font-weight: 700; width: 30%;">Page Type</th>
+              <th style="text-align: left; padding: 12px; font-weight: 700;">URL Pattern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;">Homepage</td>
+              <td style="padding: 12px;"><code>/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;">Pillar Page</td>
+              <td style="padding: 12px;"><code>/[silo]/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;">Cluster Page</td>
+              <td style="padding: 12px;"><code>/[silo]/[topic-slug]/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;">Article</td>
+              <td style="padding: 12px;"><code>/[silo]/[topic-slug]/[article-slug]/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--wire-gray-3);">
+              <td style="padding: 12px;">Review</td>
+              <td style="padding: 12px;"><code>/reviews/[app-name]/</code></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px;">Glossary Term</td>
+              <td style="padding: 12px;"><code>/glossary/[term]/</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NEXT STEPS -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3 text-center">Next Steps for Designer</div>
+
+      <div class="wire-grid wire-grid-3">
+
+        <div class="wire-card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🎨</div>
+          <div class="wire-heading-3" style="margin-bottom: 12px;">1. Brand Development</div>
+          <div class="wire-text-small">
+            Create new brand identity: colors, typography, logo treatment, icon system, image style
+          </div>
+        </div>
+
+        <div class="wire-card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🧩</div>
+          <div class="wire-heading-3" style="margin-bottom: 12px;">2. Component Library</div>
+          <div class="wire-text-small">
+            Design all reusable components: cards, pills, buttons, callouts, breadcrumbs, navigation
+          </div>
+        </div>
+
+        <div class="wire-card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🖼️</div>
+          <div class="wire-heading-3" style="margin-bottom: 12px;">3. High-Fidelity Mockups</div>
+          <div class="wire-text-small">
+            Create pixel-perfect mockups for all 8 page types in desktop + mobile
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wire-block" style="margin-top: 32px; background: #e8f5e9; border-color: var(--wire-green);">
+        <div class="wire-heading-3 mb-2">📄 Companion Document</div>
+        <p style="font-size: 15px; line-height: 1.7; margin-bottom: 12px;">
+          These wireframes are paired with a comprehensive Product Design Requirements (PDR) document:
+        </p>
+        <div style="background: white; padding: 16px; border-radius: 8px; border: 1px solid var(--wire-green);">
+          <strong style="font-size: 14px;">📄 phonics-org-design-brief.md</strong>
+          <div style="font-size: 13px; color: var(--wire-gray-5); margin-top: 4px;">
+            Contains: brand direction, technical specs, content strategy, schema requirements, implementation phases, success criteria, and complete component specifications
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wire-block footer solid">
+    <div class="wireframe-container text-center">
+      <div style="font-size: 14px; margin-bottom: 8px;">
+        <strong>Phonics.org Wireframe System</strong>
+      </div>
+      <div style="font-size: 13px; opacity: 0.8;">
+        Created: February 25, 2026 | For: Design Team | Project: Complete Site Redesign
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

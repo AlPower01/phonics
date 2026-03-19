@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "WebFetch(domain:www.reading.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

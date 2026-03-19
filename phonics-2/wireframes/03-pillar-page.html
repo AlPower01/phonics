@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar Page Wireframe - Phonics.org</title>
+  <link rel="stylesheet" href="wireframe-base.css">
+</head>
+<body>
+
+  <div class="wireframe-info">
+    <h1>Pillar/Hub Page Wireframe</h1>
+    <p>Template for all 7 silo pillar pages | 3,000-5,000 words | Links to all cluster pages in silo</p>
+  </div>
+
+  <div class="wireframe-nav">
+    <a href="02-mega-menu.html">← Mega Menu</a>
+    <a href="index.html">All Wireframes</a>
+    <a href="04-article-page.html">Article Page →</a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="wire-block header solid">
+    <div class="wire-nav-bar" style="padding: 0;">
+      <div class="wire-heading-3" style="margin: 0;">📘 Phonics.org</div>
+      <div class="wire-nav-items">
+        <span class="wire-nav-item">Phonics 101</span>
+        <span class="wire-nav-item" style="background: var(--wire-gray-1); font-weight: 700;">By Skill ▼</span>
+        <span class="wire-nav-item">For Parents</span>
+      </div>
+      <button class="wire-button small">Newsletter</button>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="wire-breadcrumb">
+    <a href="#">Home</a> &gt; <strong>Phonics Skills</strong>
+    <div class="wire-annotation">BreadcrumbList schema required. Shows URL hierarchy.</div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <div class="wire-section">
+    <div class="wireframe-container text-center">
+      <div class="wire-heading-1 mb-2">Phonics Skills: A Complete Guide to Every Skill Your Child Needs</div>
+      <div class="wire-text mb-2">
+        <strong>Last updated:</strong> Feb 2026 · <strong>By:</strong> Sarah Johnson, M.Ed. · <strong>Read time:</strong> 15 min
+      </div>
+      <div class="flex-center gap-2">
+        <div class="wire-image icon" style="width: 40px; height: 40px; font-size: 18px;">👤</div>
+        <div style="text-align: left;">
+          <div style="font-weight: 600; font-size: 14px;">Sarah Johnson</div>
+          <div style="font-size: 12px; color: var(--wire-gray-5);">M.Ed. Reading Specialist · <a href="#" style="color: var(--wire-blue);">Bio →</a></div>
+        </div>
+      </div>
+      <div class="wire-annotation">Author byline with avatar, credentials, link to /about/[author]</div>
+    </div>
+  </div>
+
+  <!-- TWO-COLUMN LAYOUT: CONTENT + TOC SIDEBAR -->
+  <div class="wire-section-alt">
+    <div class="wireframe-container">
+      <div class="wire-grid wire-grid-sidebar">
+
+        <!-- MAIN CONTENT COLUMN -->
+        <div>
+
+          <!-- Key Answer Box -->
+          <div class="wire-callout" style="background: #e3f2fd; border-color: var(--wire-blue);">
+            <strong>Quick Answer:</strong> Phonics skills are the individual reading abilities children need to decode written language, progressing from basic letter-sound relationships through complex spelling patterns. This guide covers all 12+ essential phonics skills in developmental order.
+            <div class="wire-annotation">First 60 words - critical for AI extraction/GEO. Distinct background to stand out.</div>
+          </div>
+
+          <!-- Table of Contents (mobile only) -->
+          <div class="wire-block" style="margin-top: 24px; display: none;">
+            <div class="wire-label">On This Page (Mobile Accordion)</div>
+            <div style="font-size: 14px; line-height: 2;">
+              1. What Are Phonics Skills?<br/>
+              2. Foundational Skills<br/>
+              3. Advanced Skills<br/>
+              4. Skills by Grade Level<br/>
+              5. FAQ
+            </div>
+          </div>
+
+          <!-- SECTION 1 -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-2 mb-2">What Are Phonics Skills?</div>
+            <p class="wire-text mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phonics skills represent the discrete abilities children develop as they learn to decode written language. Research from the National Reading Panel (2000) identifies systematic phonics instruction as one of the five pillars of reading...
+            </p>
+            <p class="wire-text">
+              More content here... 2-3 paragraphs introducing the topic, defining key terms, explaining importance, citing research...
+            </p>
+          </div>
+
+          <!-- SECTION 2: CVC Words -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-2 mb-2">CVC Words — The First Building Block</div>
+            <p class="wire-text mb-2">
+              CVC (consonant-vowel-consonant) words like "cat," "dog," and "run" are typically the first words children learn to decode. These simple three-letter words follow a predictable pattern...
+            </p>
+            <p class="wire-text mb-2">
+              More overview content explaining what CVC words are, why they matter, developmental context, examples...
+            </p>
+
+            <!-- CTA Card to Cluster Page -->
+            <div style="background: #e3f2fd; border: 2px solid var(--wire-blue); border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 24px; margin-bottom: 6px;">📖</div>
+                <div class="wire-heading-3" style="margin-bottom: 4px;">Deep Dive: CVC Words</div>
+                <div class="wire-text-small">Activities, worksheets, and teaching strategies →</div>
+              </div>
+              <div class="wire-pill blue" style="font-size: 12px; padding: 6px 14px;">/skills/cvc-words/</div>
+            </div>
+            <div class="wire-annotation">Each H2 section ends with prominent CTA card linking to dedicated cluster page.</div>
+          </div>
+
+          <!-- SECTION 3: Consonant Blends -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-2 mb-2">Consonant Blends</div>
+            <p class="wire-text mb-2">
+              Consonant blends occur when two or three consonants appear together, each keeping its own sound (e.g., "bl" in "black," "str" in "street")...
+            </p>
+
+            <div style="background: #e3f2fd; border: 2px solid var(--wire-blue); border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 24px; margin-bottom: 6px;">📖</div>
+                <div class="wire-heading-3" style="margin-bottom: 4px;">Deep Dive: Consonant Blends</div>
+                <div class="wire-text-small">Master bl, cr, st, spl, and more →</div>
+              </div>
+              <div class="wire-pill blue" style="font-size: 12px; padding: 6px 14px;">/skills/consonant-blends/</div>
+            </div>
+          </div>
+
+          <!-- AUDIENCE CALLOUT BOXES -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-2 mb-3">How to Teach Each Skill</div>
+
+            <div class="wire-grid wire-grid-2">
+              <div class="wire-callout parent">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 20px;">🏠</span>
+                  <strong>For Parents</strong>
+                </div>
+                <div class="wire-text-small">
+                  Try this 10-minute activity at home: Write CVC words on index cards and have your child sound out each letter, then blend them together. Start with 3-5 words and gradually increase...
+                </div>
+              </div>
+
+              <div class="wire-callout teacher">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 20px;">🏫</span>
+                  <strong>For Teachers</strong>
+                </div>
+                <div class="wire-text-small">
+                  Integrate into a 30-minute lesson block: 5-min warm-up with letter sound review, 15-min guided practice with word lists, 10-min independent work with decodable text...
+                </div>
+              </div>
+            </div>
+            <div class="wire-annotation">Appear 2-3 times throughout content at contextually relevant points.</div>
+          </div>
+
+          <!-- More sections placeholder -->
+          <div class="wire-block" style="margin-top: 32px; background: var(--wire-gray-2);">
+            <div class="wire-text" style="font-style: italic; color: var(--wire-gray-5);">
+              ...Additional H2 sections continue:<br/>
+              • Short Vowels<br/>
+              • Long Vowels & Silent E<br/>
+              • Vowel Teams<br/>
+              • R-Controlled Vowels<br/>
+              • Diphthongs<br/>
+              • Syllable Types<br/>
+              Each following the same pattern: overview + CTA card to cluster page
+            </div>
+          </div>
+
+          <!-- FAQ SECTION -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-2 mb-3">Frequently Asked Questions</div>
+
+            <div style="border-bottom: 1px solid var(--wire-gray-3); padding: 12px 0; cursor: pointer;">
+              <div class="flex-between">
+                <strong style="font-size: 15px;">What order should phonics skills be taught?</strong>
+                <span style="font-size: 18px;">▼</span>
+              </div>
+              <p class="wire-text-small" style="margin-top: 8px;">
+                Phonics skills should generally be taught in order of complexity: letter-sound relationships, then CVC words, consonant blends, digraphs, long vowels, vowel teams, r-controlled vowels...
+              </p>
+            </div>
+
+            <div style="border-bottom: 1px solid var(--wire-gray-3); padding: 12px 0; cursor: pointer;">
+              <div class="flex-between">
+                <strong style="font-size: 15px;">How many phonics skills are there?</strong>
+                <span style="font-size: 18px;">►</span>
+              </div>
+            </div>
+
+            <div style="border-bottom: 1px solid var(--wire-gray-3); padding: 12px 0; cursor: pointer;">
+              <div class="flex-between">
+                <strong style="font-size: 15px;">At what age should kids master blending?</strong>
+                <span style="font-size: 18px;">►</span>
+              </div>
+            </div>
+
+            <div class="wire-annotation">5-8 questions. FAQPage schema. Targets featured snippets / People Also Ask.</div>
+          </div>
+
+          <!-- CLUSTER INDEX GRID -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-2 mb-3">All Phonics Skills Pages</div>
+
+            <div class="wire-grid wire-grid-3">
+              {['CVC Words', 'Consonant Blends', 'Digraphs', 'Short Vowels', 'Long Vowels', 'Vowel Teams', 'R-Controlled', 'Diphthongs', 'Silent E', 'Syllable Types', 'Sight Words', 'Spelling Patterns'].map(skill => (
+                <div class="wire-card" style="text-align: center; padding: 16px;">
+                  <div style="font-size: 28px; margin-bottom: 8px;">📄</div>
+                  <strong style="font-size: 14px;">{skill}</strong>
+                  <div style="color: var(--wire-blue); font-size: 12px; margin-top: 6px; font-weight: 600;">Read Guide →</div>
+                </div>
+              ))}
+            </div>
+            <div class="wire-annotation">Visual index of all cluster pages in this silo. Shows full silo structure at a glance.</div>
+          </div>
+
+          <!-- CROSS-SILO LINKS -->
+          <div class="wire-block" style="margin-top: 32px; border-style: solid;">
+            <div class="wire-heading-3 mb-3">Related Sections</div>
+
+            <div class="wire-grid wire-grid-3">
+              <div class="wire-card text-center">
+                <div style="font-size: 40px; margin-bottom: 12px;">🏫</div>
+                <div class="wire-heading-3" style="font-size: 16px; margin-bottom: 8px;">Teaching Phonics</div>
+                <div class="wire-text-small">Classroom strategies & lesson plans</div>
+                <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; margin-top: 8px; display: inline-block;">Explore →</a>
+              </div>
+
+              <div class="wire-card text-center">
+                <div style="font-size: 40px; margin-bottom: 12px;">🏠</div>
+                <div class="wire-heading-3" style="font-size: 16px; margin-bottom: 8px;">Learning at Home</div>
+                <div class="wire-text-small">Parent guides & activities</div>
+                <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; margin-top: 8px; display: inline-block;">Explore →</a>
+              </div>
+
+              <div class="wire-card text-center">
+                <div style="font-size: 40px; margin-bottom: 12px;">⭐</div>
+                <div class="wire-heading-3" style="font-size: 16px; margin-bottom: 8px;">App Reviews</div>
+                <div class="wire-text-small">Top-rated phonics apps</div>
+                <a href="#" class="wire-text" style="color: var(--wire-blue); text-decoration: none; font-weight: 600; font-size: 13px; margin-top: 8px; display: inline-block;">Explore →</a>
+              </div>
+            </div>
+            <div class="wire-annotation">3 cards linking to related silos. Builds horizontal link equity across site.</div>
+          </div>
+
+        </div>
+
+        <!-- STICKY SIDEBAR (TOC) -->
+        <div class="wire-sidebar">
+          <div class="wire-block" style="background: rgba(243, 229, 245, 0.5); border-color: var(--wire-purple);">
+            <div class="wire-label">On This Page <span class="wire-label-badge">Sticky</span></div>
+            <div style="font-size: 13px; line-height: 2; margin-top: 12px;">
+              <a href="#" style="color: var(--wire-blue); text-decoration: none; font-weight: 600;">• What Are Phonics Skills?</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• CVC Words</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• Consonant Blends</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• Short Vowels</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• Long Vowels</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• Vowel Teams</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• By Grade Level</a><br/>
+              <a href="#" style="color: var(--wire-text); text-decoration: none;">• FAQ</a>
+            </div>
+            <div class="wire-annotation">Highlights active section on scroll. Collapses to accordion on mobile.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wire-block footer solid">
+    <div class="wireframe-container">
+      <div class="wire-text" style="color: rgba(255,255,255,0.7); text-align: center;">
+        [Global Footer - Same as Homepage]
+      </div>
+    </div>
+  </div>
+
+  <!-- SPECS SUMMARY -->
+  <div class="wire-section">
+    <div class="wireframe-container">
+      <div class="wire-heading-2 mb-3">Template Application</div>
+      <div class="wire-block highlight">
+        <strong>This template is reused for all 7 pillar pages:</strong>
+        <ul style="margin: 12px 0 0 20px; line-height: 2;">
+          <li>/phonics/ — Phonics 101 pillar</li>
+          <li>/skills/ — Phonics Skills pillar (shown in this wireframe)</li>
+          <li>/teaching/ — Teaching Phonics pillar</li>
+          <li>/home/ — Learning at Home pillar</li>
+          <li>/support/ — Struggling Readers pillar</li>
+          <li>/reviews/ — App Reviews hub (slightly different layout)</li>
+          <li>/science-of-reading/ — Science of Reading pillar</li>
+        </ul>
+        <div style="margin-top: 16px;">
+          <strong>Content requirements:</strong> 3,000-5,000 words | Link to every cluster page | 3-5 cross-silo links | Updated quarterly
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
