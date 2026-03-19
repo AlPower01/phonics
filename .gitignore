@@ -1,6 +1,8 @@
 .next
 node_modules
 .DS_Store
+.claude
+__MACOSX
 .env
 .env.local
 .env.development.local
