@@ -4,132 +4,56 @@ import { Search } from "lucide-react";
 import { getClustersBySilo, silos } from "@/data/site";
 
 const siloMap = Object.fromEntries(silos.map((silo) => [silo.id, silo]));
-
-function buildClusterGroups(siloId: "phonics" | "skills" | "support") {
-  const orderedClusters = getClustersBySilo(siloId);
-  const midpoint = Math.ceil(orderedClusters.length / 2);
-  const first = orderedClusters.slice(0, midpoint);
-  const second = orderedClusters.slice(midpoint);
-
-  return [
-    {
-      heading: "Cluster Pages",
-      links: first.map((cluster) => ({
-        label: cluster.title,
-        href: cluster.overviewUrl,
-        description: cluster.summary,
-      })),
-    },
-    {
-      heading: "More Topics",
-      links: second.map((cluster) => ({
-        label: cluster.title,
-        href: cluster.overviewUrl,
-        description: cluster.summary,
-      })),
-    },
-  ].filter((group) => group.links.length > 0);
-}
-
-const megaNavItems = [
+const aboutPhonicsLinks = [
   {
-    key: "phonics",
     label: "Phonics 101",
     href: "/phonics/",
-    title: "Phonics 101",
-    intro: "Core concepts, definitions, and the research-backed foundations behind phonics instruction.",
-    groups: buildClusterGroups("phonics"),
-    featured: siloMap["phonics"].featured,
+    description: "Core concepts, definitions, and instructional foundations.",
   },
   {
-    key: "skills",
+    label: "Science of Reading",
+    href: "/science-of-reading/",
+    description: "Research translated into practical phonics guidance.",
+  },
+  {
     label: "Phonics Skills",
     href: "/skills/",
-    title: "Skills",
-    intro: "Browse decoding skills from letter-sound knowledge through advanced vowel and syllable patterns.",
-    groups: buildClusterGroups("skills"),
-    featured: siloMap["skills"].featured,
+    description: "Skill-by-skill guides from early decoding to advanced patterns.",
   },
   {
-    key: "support",
     label: "Struggling Readers",
     href: "/support/",
-    title: "Support",
-    intro: "Intervention, dyslexia-informed support, and practical next steps for struggling readers.",
-    groups: buildClusterGroups("support"),
-    featured: siloMap["support"].featured,
+    description: "Intervention, dyslexia-informed support, and next steps.",
   },
 ] as const;
 
+const aboutPhonicsGroups = [
+  { links: aboutPhonicsLinks.slice(0, 2) },
+  { links: aboutPhonicsLinks.slice(2, 4) },
+];
+
+const megaNavItem = {
+  key: "about-phonics",
+  label: "About Phonics",
+  href: "/phonics/",
+  title: "About Phonics",
+  intro: "Start with the core phonics knowledge sections, then move into audience pathways and reviews.",
+  groups: aboutPhonicsGroups,
+  featured: siloMap["phonics"].featured,
+} as const;
+
 const plainNavItems = [
-  { key: "parents", label: "For Parents", href: "/for-parents/" },
-  { key: "teachers", label: "For Teachers", href: "/for-teachers/" },
   { key: "reviews", label: "App Reviews", href: "/reviews/" },
+  { key: "teachers", label: "For Teachers", href: "/for-teachers/" },
+  { key: "parents", label: "For Parents", href: "/for-parents/" },
 ] as const;
 
 function DesktopMegaNav() {
   return (
     <nav className="hidden items-center gap-4 lg:flex xl:gap-5" aria-label="Primary">
-      {megaNavItems.slice(0, 3).map((item) => (
-        <div key={item.key} className="group relative">
-          <Link
-            href={item.href}
-            className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
-          >
-            {item.label}
-          </Link>
-
-          <div className="pointer-events-none fixed left-1/2 top-16 z-50 hidden w-[min(1200px,calc(100vw-40px))] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
-            <div className="pointer-events-auto grid grid-cols-[220px_1fr_1fr_260px] gap-5 rounded-[24px] border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
-              <div className="rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100 p-4">
-                <h3 className="mb-3 text-xl">{item.title}</h3>
-                <p className="mb-4 text-sm text-ink-700">{item.intro}</p>
-                <Link href={item.href} className="button-tertiary">
-                  Overview
-                </Link>
-              </div>
-
-              {item.groups.map((group) => (
-                <div key={group.heading} className="space-y-2">
-                  <div className="space-y-2">
-                    {group.links.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="block rounded-[16px] px-3 py-3 transition hover:bg-paper-100"
-                      >
-                        <div className="font-semibold text-ink-900">{link.label}</div>
-                        <div className="mt-1 text-sm text-ink-500">{link.description}</div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-
-              <div className="overflow-hidden rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100">
-                <img
-                  src={item.featured.image}
-                  alt={item.featured.title}
-                  className="aspect-[4/3] w-full object-cover grayscale"
-                />
-                <div className="space-y-3 p-4">
-                  <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-ink-500">
-                    Featured
-                  </div>
-                  <div className="text-lg font-semibold text-ink-900">{item.featured.title}</div>
-                  <p className="text-sm text-ink-700">{item.featured.excerpt}</p>
-                  <Link href={item.featured.href} className="button-tertiary">
-                    Read more
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
       {plainNavItems.map((item) => (
         <div key={item.key} className="flex items-center">
-          {item.key === "reviews" ? (
+          {item.key === "teachers" ? (
             <span
               aria-hidden="true"
               className="mr-4 h-5 w-px bg-[rgba(0,0,0,0.12)]"
@@ -148,63 +72,61 @@ function DesktopMegaNav() {
           </Link>
         </div>
       ))}
-      {megaNavItems.slice(3).map((item) => (
-        <div key={item.key} className="group relative">
-          <Link
-            href={item.href}
-            className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
-          >
-            {item.label}
-          </Link>
+      <div key={megaNavItem.key} className="group relative">
+        <Link
+          href={megaNavItem.href}
+          className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
+        >
+          {megaNavItem.label}
+        </Link>
 
-          <div className="pointer-events-none fixed left-1/2 top-16 z-50 hidden w-[min(1200px,calc(100vw-40px))] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
-            <div className="pointer-events-auto grid grid-cols-[220px_1fr_1fr_260px] gap-5 rounded-[24px] border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
-              <div className="rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100 p-4">
-                <h3 className="mb-3 text-xl">{item.title}</h3>
-                <p className="mb-4 text-sm text-ink-700">{item.intro}</p>
-                <Link href={item.href} className="button-tertiary">
-                  Overview
-                </Link>
+        <div className="pointer-events-none fixed left-1/2 top-16 z-50 hidden w-[min(1200px,calc(100vw-40px))] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
+          <div className="pointer-events-auto grid grid-cols-[220px_1fr_1fr_260px] gap-5 rounded-[24px] border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
+            <div className="rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100 p-4">
+              <h3 className="mb-3 text-xl">{megaNavItem.title}</h3>
+              <p className="mb-4 text-sm text-ink-700">{megaNavItem.intro}</p>
+              <Link href={megaNavItem.href} className="button-tertiary">
+                Start here
+              </Link>
+            </div>
+
+            {megaNavItem.groups.map((group, index) => (
+              <div key={index} className="space-y-2">
+                <div className="space-y-2">
+                  {group.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block rounded-[16px] px-3 py-3 transition hover:bg-paper-100"
+                    >
+                      <div className="font-semibold text-ink-900">{link.label}</div>
+                      <div className="mt-1 text-sm text-ink-500">{link.description}</div>
+                    </Link>
+                  ))}
+                </div>
               </div>
+            ))}
 
-              {item.groups.map((group) => (
-                <div key={group.heading} className="space-y-2">
-                  <div className="space-y-2">
-                    {group.links.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="block rounded-[16px] px-3 py-3 transition hover:bg-paper-100"
-                      >
-                        <div className="font-semibold text-ink-900">{link.label}</div>
-                        <div className="mt-1 text-sm text-ink-500">{link.description}</div>
-                      </Link>
-                    ))}
-                  </div>
+            <div className="overflow-hidden rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100">
+              <img
+                src={megaNavItem.featured.image}
+                alt={megaNavItem.featured.title}
+                className="aspect-[4/3] w-full object-cover grayscale"
+              />
+              <div className="space-y-3 p-4">
+                <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-ink-500">
+                  Featured
                 </div>
-              ))}
-
-              <div className="overflow-hidden rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100">
-                <img
-                  src={item.featured.image}
-                  alt={item.featured.title}
-                  className="aspect-[4/3] w-full object-cover grayscale"
-                />
-                <div className="space-y-3 p-4">
-                  <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-ink-500">
-                    Featured
-                  </div>
-                  <div className="text-lg font-semibold text-ink-900">{item.featured.title}</div>
-                  <p className="text-sm text-ink-700">{item.featured.excerpt}</p>
-                  <Link href={item.featured.href} className="button-tertiary">
-                    Read more
-                  </Link>
-                </div>
+                <div className="text-lg font-semibold text-ink-900">{megaNavItem.featured.title}</div>
+                <p className="text-sm text-ink-700">{megaNavItem.featured.excerpt}</p>
+                <Link href={megaNavItem.featured.href} className="button-tertiary">
+                  Read more
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      ))}
+      </div>
     </nav>
   );
 }
@@ -217,14 +139,14 @@ function MobileNav() {
       </summary>
       <div className="absolute right-0 top-full z-50 mt-3 w-[min(92vw,360px)] rounded-[20px] border border-[rgba(0,0,0,0.08)] bg-white p-4 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
         <div className="space-y-3">
-          {[...megaNavItems.slice(0, 3), ...plainNavItems, ...megaNavItems.slice(3)].map((item) => (
+          {[plainNavItems[0], megaNavItem, plainNavItems[1], plainNavItems[2]].map((item) => (
             <details key={item.key} className="rounded-[16px] border border-[rgba(0,0,0,0.06)] bg-paper-100 p-3">
               <summary className="cursor-pointer list-none text-sm font-semibold text-ink-900">
-                {item.label}
+                {"key" in item && item.key === "reviews" ? "★ " : ""}{item.label}
               </summary>
               <div className="mt-3 space-y-3">
                 <Link href={item.href} className="block text-sm font-semibold text-ink-900">
-                  Overview
+                  {"groups" in item ? "Start here" : "Open"}
                 </Link>
                 {"groups" in item ? item.groups.flatMap((group) => group.links).map((link) => (
                   <Link key={link.href} href={link.href} className="block text-sm text-ink-700">

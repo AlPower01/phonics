@@ -39,11 +39,20 @@ export default function HomePage() {
     },
   ];
   const primaryTopics = [
+    {
+      id: "reviews",
+      href: "/reviews/",
+      shortLabel: "Reviews",
+      accent: "#71717a",
+      label: "App Reviews",
+      description: "Expert reviews of phonics apps and programs, built to drive comparison and decision-making.",
+    },
     homepageTopics[0],
+    homepageTopics[3],
     homepageTopics[1],
     homepageTopics[2],
-    ...audienceTopics,
-    homepageTopics[3],
+    audienceTopics[1],
+    audienceTopics[0],
   ].filter(Boolean);
 
   return (
@@ -54,7 +63,7 @@ export default function HomePage() {
           <div className="max-w-[720px] space-y-3">
             <span className="eyebrow">Explore by topic</span>
             <h2 className="text-4xl">Navigate the site through clear learning pathways</h2>
-            <p>Seven core sections organize concepts, skills, parent guidance, teacher guidance, intervention, reviews, and research so every page sits inside a scannable hierarchy.</p>
+            <p>Start with reviews, move through the core phonics knowledge sections, or jump directly into teacher and parent pathways.</p>
           </div>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {primaryTopics.map((silo) => (

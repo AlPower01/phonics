@@ -9,12 +9,13 @@ import { TOC } from "@/components/toc";
 import { getClustersBySilo, getSilo, silos, type SiloId } from "@/data/site";
 
 const primarySectionLinks = [
+  { id: "reviews", label: "App Reviews", href: "/reviews/", description: "Expert reviews of phonics apps and programs." },
   { id: "phonics", label: "Phonics 101", href: "/phonics/", description: "Core concepts, definitions, and instructional foundations." },
-  { id: "skills", label: "Phonics Skills", href: "/skills/", description: "Skill-specific guides from early decoding through advanced patterns." },
-  { id: "parents", label: "For Parents", href: "/for-parents/", description: "Curated article pathways and age-based support for families." },
-  { id: "teachers", label: "For Teachers", href: "/for-teachers/", description: "Curated article pathways and planning support for educators." },
-  { id: "support", label: "Struggling Readers", href: "/support/", description: "Intervention, dyslexia-informed support, and next-step guidance." },
   { id: "science-of-reading", label: "Science of Reading", href: "/science-of-reading/", description: "Research translated into practical reading guidance." },
+  { id: "skills", label: "Phonics Skills", href: "/skills/", description: "Skill-specific guides from early decoding through advanced patterns." },
+  { id: "support", label: "Struggling Readers", href: "/support/", description: "Intervention, dyslexia-informed support, and next-step guidance." },
+  { id: "teachers", label: "For Teachers", href: "/for-teachers/", description: "Curated article pathways and planning support for educators." },
+  { id: "parents", label: "For Parents", href: "/for-parents/", description: "Curated article pathways and age-based support for families." },
 ];
 
 const pillarContent: Record<

@@ -22,13 +22,14 @@ export function Footer() {
         <div>
           <h3 className="mb-4 text-xl text-white">Explore</h3>
           <div className="space-y-3 text-paper-100">
-            <Link href="/phonics/" className="block hover:text-white">Phonics 101</Link>
-            <Link href="/skills/" className="block hover:text-white">Phonics Skills</Link>
-            <Link href="/for-parents/" className="block hover:text-white">For Parents</Link>
-            <Link href="/for-teachers/" className="block hover:text-white">For Teachers</Link>
-            <Link href="/support/" className="block hover:text-white">Struggling Readers</Link>
-            <Link href="/science-of-reading/" className="block hover:text-white">Science of Reading</Link>
             <Link href="/reviews/" className="block hover:text-white">App Reviews</Link>
+            <div className="pt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/60">About Phonics</div>
+            <Link href="/phonics/" className="block hover:text-white">Phonics 101</Link>
+            <Link href="/science-of-reading/" className="block hover:text-white">Science of Reading</Link>
+            <Link href="/skills/" className="block hover:text-white">Phonics Skills</Link>
+            <Link href="/support/" className="block hover:text-white">Struggling Readers</Link>
+            <Link href="/for-teachers/" className="block hover:text-white">For Teachers</Link>
+            <Link href="/for-parents/" className="block hover:text-white">For Parents</Link>
           </div>
         </div>
         <div>
