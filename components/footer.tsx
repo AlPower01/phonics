@@ -24,13 +24,11 @@ export function Footer() {
           <div className="space-y-3 text-paper-100">
             <Link href="/phonics/" className="block hover:text-white">Phonics 101</Link>
             <Link href="/skills/" className="block hover:text-white">Phonics Skills</Link>
-            <Link href="/teaching/" className="block hover:text-white">Teaching Phonics</Link>
-            <Link href="/home/" className="block hover:text-white">Learning at Home</Link>
+            <Link href="/for-parents/" className="block hover:text-white">For Parents</Link>
+            <Link href="/for-teachers/" className="block hover:text-white">For Teachers</Link>
             <Link href="/support/" className="block hover:text-white">Struggling Readers</Link>
             <Link href="/science-of-reading/" className="block hover:text-white">Science of Reading</Link>
             <Link href="/reviews/" className="block hover:text-white">App Reviews</Link>
-            <Link href="/for-parents/" className="block hover:text-white">For Parents</Link>
-            <Link href="/for-teachers/" className="block hover:text-white">For Teachers</Link>
           </div>
         </div>
         <div>

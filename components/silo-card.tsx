@@ -1,9 +1,16 @@
 import Link from "next/link";
 
-import { Silo } from "@/data/site";
 import { Pill } from "@/components/pill";
 
-export function SiloCard({ silo }: { silo: Silo }) {
+type TopicCard = {
+  href: string;
+  shortLabel: string;
+  accent: string;
+  label: string;
+  description: string;
+};
+
+export function SiloCard({ silo }: { silo: TopicCard }) {
   return (
     <Link
       href={silo.href}

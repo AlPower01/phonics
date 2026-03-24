@@ -7,7 +7,7 @@ import { ReviewCard } from "@/components/review-card";
 import { SiloCard } from "@/components/silo-card";
 import { SiteLayout } from "@/components/site-layout";
 import { TrustBar } from "@/components/trust-bar";
-import { agePathways, articles, reviews, silos, trustStats, type Silo } from "@/data/site";
+import { agePathways, articles, reviews, silos, trustStats } from "@/data/site";
 
 export default function HomePage() {
   const featured = articles.slice(0, 3);
@@ -16,12 +16,35 @@ export default function HomePage() {
     "phonics",
     "skills",
     "support",
-    "teaching",
-    "home",
     "science-of-reading",
   ]
     .map((id) => silos.find((silo) => silo.id === id))
-    .filter((silo): silo is Silo => silo !== undefined);
+    .filter((silo): silo is (typeof silos)[number] => silo !== undefined);
+  const audienceTopics = [
+    {
+      id: "parents",
+      href: "/for-parents/",
+      shortLabel: "Parents",
+      accent: "#71717a",
+      label: "For Parents",
+      description: "Curated article pathways, age-based support, and review-led guidance for families.",
+    },
+    {
+      id: "teachers",
+      href: "/for-teachers/",
+      shortLabel: "Teachers",
+      accent: "#71717a",
+      label: "For Teachers",
+      description: "Classroom-focused article pathways, planning support, and review-led guidance for educators.",
+    },
+  ];
+  const primaryTopics = [
+    homepageTopics[0],
+    homepageTopics[1],
+    homepageTopics[2],
+    ...audienceTopics,
+    homepageTopics[3],
+  ].filter(Boolean);
 
   return (
     <SiteLayout>
@@ -31,10 +54,10 @@ export default function HomePage() {
           <div className="max-w-[720px] space-y-3">
             <span className="eyebrow">Explore by topic</span>
             <h2 className="text-4xl">Navigate the site through clear learning pathways</h2>
-            <p>Seven core sections organize concepts, skills, teaching, home support, intervention, reviews, and research so every page sits inside a scannable hierarchy.</p>
+            <p>Seven core sections organize concepts, skills, parent guidance, teacher guidance, intervention, reviews, and research so every page sits inside a scannable hierarchy.</p>
           </div>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {homepageTopics.map((silo) => (
+            {primaryTopics.map((silo) => (
               <SiloCard key={silo.id} silo={silo} />
             ))}
           </div>
