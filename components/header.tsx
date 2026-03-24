@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { BookOpen, HeartHandshake, Microscope, Search, SpellCheck } from "lucide-react";
 
 import { getClustersBySilo, silos } from "@/data/site";
 
@@ -9,37 +9,33 @@ const aboutPhonicsLinks = [
     label: "Phonics 101",
     href: "/phonics/",
     description: "Core concepts, definitions, and instructional foundations.",
+    icon: BookOpen,
   },
   {
     label: "Science of Reading",
     href: "/science-of-reading/",
     description: "Research translated into practical phonics guidance.",
+    icon: Microscope,
   },
   {
     label: "Phonics Skills",
     href: "/skills/",
     description: "Skill-by-skill guides from early decoding to advanced patterns.",
+    icon: SpellCheck,
   },
   {
     label: "Struggling Readers",
     href: "/support/",
     description: "Intervention, dyslexia-informed support, and next steps.",
+    icon: HeartHandshake,
   },
 ] as const;
-
-const aboutPhonicsGroups = [
-  { links: aboutPhonicsLinks.slice(0, 2) },
-  { links: aboutPhonicsLinks.slice(2, 4) },
-];
 
 const megaNavItem = {
   key: "about-phonics",
   label: "About Phonics",
   href: "/phonics/",
-  title: "About Phonics",
-  intro: "Start with the core phonics knowledge sections, then move into audience pathways and reviews.",
-  groups: aboutPhonicsGroups,
-  featured: siloMap["phonics"].featured,
+  links: aboutPhonicsLinks,
 } as const;
 
 const plainNavItems = [
@@ -51,7 +47,52 @@ const plainNavItems = [
 function DesktopMegaNav() {
   return (
     <nav className="hidden items-center gap-4 lg:flex xl:gap-5" aria-label="Primary">
-      {plainNavItems.map((item) => (
+      <div className="flex items-center">
+        <Link
+          href={plainNavItems[0].href}
+          className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
+        >
+          <span aria-hidden="true" className="mr-2 text-sm text-ink-900">
+            ★
+          </span>
+          {plainNavItems[0].label}
+        </Link>
+      </div>
+      <div className="group relative">
+        <Link
+          href={megaNavItem.href}
+          className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
+        >
+          {megaNavItem.label}
+        </Link>
+
+        <div className="pointer-events-none fixed left-1/2 top-16 z-50 hidden w-[min(420px,calc(100vw-40px))] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
+          <div className="pointer-events-auto rounded-[24px] border border-[rgba(0,0,0,0.08)] bg-white p-4 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
+            <div className="space-y-2">
+              {megaNavItem.links.map((link) => {
+                const Icon = link.icon;
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="flex items-start gap-3 rounded-[16px] px-3 py-3 transition hover:bg-paper-100"
+                  >
+                    <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-xl border border-[rgba(0,0,0,0.08)] bg-paper-100 text-ink-900">
+                      <Icon className="size-4" />
+                    </span>
+                    <span className="block">
+                      <span className="block font-semibold text-ink-900">{link.label}</span>
+                      <span className="mt-1 block text-sm text-ink-500">{link.description}</span>
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+      {plainNavItems.slice(1).map((item) => (
         <div key={item.key} className="flex items-center">
           {item.key === "teachers" ? (
             <span
@@ -63,70 +104,10 @@ function DesktopMegaNav() {
             href={item.href}
             className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
           >
-            {item.key === "reviews" ? (
-              <span aria-hidden="true" className="mr-2 text-sm text-ink-900">
-                ★
-              </span>
-            ) : null}
             {item.label}
           </Link>
         </div>
       ))}
-      <div key={megaNavItem.key} className="group relative">
-        <Link
-          href={megaNavItem.href}
-          className="inline-flex min-h-11 items-center border-b-2 border-transparent py-3 text-[13px] font-bold tracking-[0.01em] transition hover:border-ink-900 hover:text-ink-900 xl:text-sm"
-        >
-          {megaNavItem.label}
-        </Link>
-
-        <div className="pointer-events-none fixed left-1/2 top-16 z-50 hidden w-[min(1200px,calc(100vw-40px))] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
-          <div className="pointer-events-auto grid grid-cols-[220px_1fr_1fr_260px] gap-5 rounded-[24px] border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
-            <div className="rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100 p-4">
-              <h3 className="mb-3 text-xl">{megaNavItem.title}</h3>
-              <p className="mb-4 text-sm text-ink-700">{megaNavItem.intro}</p>
-              <Link href={megaNavItem.href} className="button-tertiary">
-                Start here
-              </Link>
-            </div>
-
-            {megaNavItem.groups.map((group, index) => (
-              <div key={index} className="space-y-2">
-                <div className="space-y-2">
-                  {group.links.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="block rounded-[16px] px-3 py-3 transition hover:bg-paper-100"
-                    >
-                      <div className="font-semibold text-ink-900">{link.label}</div>
-                      <div className="mt-1 text-sm text-ink-500">{link.description}</div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            <div className="overflow-hidden rounded-[18px] border border-[rgba(0,0,0,0.06)] bg-paper-100">
-              <img
-                src={megaNavItem.featured.image}
-                alt={megaNavItem.featured.title}
-                className="aspect-[4/3] w-full object-cover grayscale"
-              />
-              <div className="space-y-3 p-4">
-                <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-ink-500">
-                  Featured
-                </div>
-                <div className="text-lg font-semibold text-ink-900">{megaNavItem.featured.title}</div>
-                <p className="text-sm text-ink-700">{megaNavItem.featured.excerpt}</p>
-                <Link href={megaNavItem.featured.href} className="button-tertiary">
-                  Read more
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </nav>
   );
 }
@@ -148,7 +129,7 @@ function MobileNav() {
                 <Link href={item.href} className="block text-sm font-semibold text-ink-900">
                   {"groups" in item ? "Start here" : "Open"}
                 </Link>
-                {"groups" in item ? item.groups.flatMap((group) => group.links).map((link) => (
+                {"links" in item ? item.links.map((link) => (
                   <Link key={link.href} href={link.href} className="block text-sm text-ink-700">
                     {link.label}
                   </Link>
