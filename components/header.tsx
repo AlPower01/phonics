@@ -66,7 +66,7 @@ function DesktopMegaNav() {
           {megaNavItem.label}
         </Link>
 
-        <div className="pointer-events-none fixed left-1/2 top-16 z-50 hidden w-[min(420px,calc(100vw-40px))] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
+        <div className="pointer-events-none absolute left-0 top-full z-50 hidden w-[420px] max-w-[min(420px,calc(100vw-40px))] pt-3 group-hover:block group-focus-within:block">
           <div className="pointer-events-auto rounded-[24px] border border-[rgba(0,0,0,0.08)] bg-white p-4 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
             <div className="space-y-2">
               {megaNavItem.links.map((link) => {
