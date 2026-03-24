@@ -39,14 +39,6 @@ export default function HomePage() {
     },
   ];
   const primaryTopics = [
-    {
-      id: "reviews",
-      href: "/reviews/",
-      shortLabel: "Reviews",
-      accent: "#71717a",
-      label: "App Reviews",
-      description: "Expert reviews of phonics apps and programs, built to drive comparison and decision-making.",
-    },
     homepageTopics[0],
     homepageTopics[3],
     homepageTopics[1],
